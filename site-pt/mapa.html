@@ -1,0 +1,3001 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Roadmap Lisbon Immigrant</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body>
+			<div id="wrapper" class="fade-in">
+					<div class="inicio titulo">
+						<h1 style="color:red;">ROADMAP</h1><br />
+						<h1 style="color:blue;">Lisbon Immigrant</h1>	
+					</div>
+				<!-- Menu -->
+				<div id="barra">
+					<nav id="nav">
+												
+						<ul class="links" style="border:2px solid black">
+							<li class="active" ><a href="index.html">Início</a></li>
+							<li style="background-color:#FFFFFF;" class="normal"><a href="generic.html"><p style="color:black;">Menu</p></a></li>							
+							<li style="background-color:#FFFFFF;" class="normal"><a href="CML.html"><p style="color:black;">Câmara Municipal De Lisboa</p></a></li>	
+							<li style="background-color:#FFFFFF;" class="normal"><a href="Contactos.html"><p style="color:black;">Contactos</p></a></li>
+							<li	class="lingua">
+								<select class="combo-language">
+									<option>PT</option>
+									<a href="../site-en/index-en.html"><option>EN</option></a>
+									<a href="../site-sa/index-sa.html"><option>SA</option></a>
+								</select>&#9660;
+							</li>
+						</ul>
+
+					</nav>
+				</div>
+				<div id="main">
+				
+				<div id="info" style="border: solid;width:100%">
+				<h2><font align ="center"> Mapa </font></h2>
+				<div id="map"> </div>
+				<script>
+					function initMap() {
+					var uluru = {lat: 38.7437396, lng: -9.2302438};
+					var map = new google.maps.Map(document.getElementById('map'), {
+					zoom: 12,
+					center: uluru
+					}); 
+					
+					var EmerSocial = new google.maps.Marker({
+					position: {lat: 38.7768791, lng: -9.1697786},
+					map: map,
+					});
+					
+					var ConteudoEmer = 'Fundo de Emergência Social <br><br><a href="https://www.google.com/maps/dir//Associa%C3%A7%C3%A3o+Emerg%C3%AAncia+Social,+Rua+Maria+Do+Carmo+Torres,+Lt.+1,+Lj+1+B,+Lisboa,+1750-174+Lisboa/@38.7761252,-9.1559237,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd19328ce17853cb:0xec3498b8ac91d16e!2m2!1d-9.153735!2d38.776121" target="_blank">Direções</a>';
+
+					  var infowindowEmer = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoEmer+"</div>"
+					  });
+
+					  EmerSocial.addListener('click', function() {
+						infowindowEmer.open(map, EmerSocial);
+					  });
+					
+					var LojaCidadaoLaranjeira = new google.maps.Marker({
+					position: {lat: 38.7505563, lng: -9.1721781},
+					map: map
+					});
+					
+					var ConteudoLaranj = 'Loja do Cidadão Laranjeira <br><br><a href="https://www.google.com/maps/dir//Loja+do+Cidad%C3%A3o+das+Laranjeiras,+Rua+Abranches+Ferr%C3%A3o,+Lisboa/@38.7507488,-9.2416179,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd193320e57689d1:0x1e0db4e4552acfea!2m2!1d-9.1715773!2d38.7506358" target="_blank">Direções</a>';
+
+					  var infowindowConteudoLaranj = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoLaranj+"</div>"
+					  });
+
+					  LojaCidadaoLaranjeira.addListener('click', function() {
+						infowindowConteudoLaranj.open(map, LojaCidadaoLaranjeira);
+					  });
+					
+					var LojaCidadaoMarvila = new google.maps.Marker({
+					position: {lat: 38.7494592, lng: -9.1171091},
+					map: map
+					});
+					
+					var ConteudoMarvila = 'Loja do Cidadão Marvila <br><br><a href="https://www.google.com/maps/dir//Loja+do+Cidad%C3%A3o+de+Marvila,+Av.+Santo+Condest%C3%A1vel,+Lisboa/@38.7498525,-9.187611,12z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0xd1933cecc5235c3:0x354f5f9ece967932!2m2!1d-9.1175704!2d38.7497395" target="_blank">Direções</a>';
+
+					  var infowindowConteudoMarvila = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoMarvila+"</div>"
+					  });
+
+					  LojaCidadaoMarvila.addListener('click', function() {
+						infowindowConteudoMarvila.open(map, LojaCidadaoMarvila);
+					  });
+					
+					var ServiçoFinan1 = new google.maps.Marker({
+					position: {lat: 38.724356, lng: -9.1288799},
+					map: map
+					});
+					
+					var ConteudoFinan1 = 'Serviço de Finanças Lisboa 1 <br><br><a href="https://www.google.com/maps/dir//Servi%C3%A7o+de+Finan%C3%A7as,+Avenida+General+Ro%C3%A7adas+11+B,+Lisboa/@38.7244565,-9.1988025,12z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0xd19338dfeea373f:0xa2f1a78ccd5cbb2a!2m2!1d-9.1287619!2d38.7243435" target="_blank">Direções</a>';
+
+					  var infowindowConteudoFinan1 = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoFinan1+"</div>"
+					  });
+
+					  ServiçoFinan1.addListener('click', function() {
+						infowindowConteudoFinan1.open(map, ServiçoFinan1);
+					  });
+					
+					var ServiçoFinan2 = new google.maps.Marker({
+					position: {lat: 38.7229144, lng: -9.1531691},
+					map: map
+					});
+					
+					var ConteudoFinan2 = 'Serviço de Finanças Lisboa 2 <br><br><a href="https://www.google.com/maps/dir//Servi%C3%A7o+de+Finan%C3%A7as+Lisboa+2,+R.+Rodrigo+da+Fonseca+57,+1250-190+Lisboa/@38.7212404,-9.2040641,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd19337082c98d05:0x356a8ad5f7622b2c!2m2!1d-9.1532496!2d38.7227345" target="_blank">Direções</a>';
+
+					  var infowindowConteudoFinan2 = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoFinan2+"</div>"
+					  });
+
+					  ServiçoFinan2.addListener('click', function() {
+						infowindowConteudoFinan2.open(map, ServiçoFinan2);
+					  });
+					
+					var ServiçoFinan3 = new google.maps.Marker({
+					position: {lat: 38.7106688, lng: -9.1369169},
+					map: map
+					});
+					
+					var ConteudoFinan3 = 'Serviço de Finanças Lisboa 3 <br><br><a href="https://www.google.com/maps/dir//Servi%C3%A7o+de+Finan%C3%A7as+de+Lisboa+3,+Rua+dos+Correeiros,+Lisboa/@38.7155006,-9.1390129,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1933838aa4e365:0xbec963939e547f9d!2m2!1d-9.1372066!2d38.7107232" target="_blank">Direções</a>';
+
+					  var infowindowConteudoFinan3 = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoFinan3+"</div>"
+					  });
+
+					  ServiçoFinan3.addListener('click', function() {
+						infowindowConteudoFinan3.open(map, ServiçoFinan3);
+					  });
+					
+					var ServiçoFinan4 = new google.maps.Marker({
+					position: {lat: 38.7342251, lng: -9.1375988},
+					map: map
+					});
+					
+					var ConteudoFinan4 = 'Serviço de Finanças Lisboa 4 <br><br><a href="https://www.google.com/maps/dir//Servi%C3%A7o+de+Finan%C3%A7as+Lisboa+4,+Rua+de+Ponta+Delgada+69,+1000-035+Lisboa/@38.7212404,-9.2040641,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1933987f771043:0x505bd25ba3fe34d4!2m2!1d-9.1371267!2d38.7342544" target="_blank">Direções</a>';
+
+					  var infowindowConteudoFinan4 = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoFinan4+"</div>"
+					  });
+
+					  ServiçoFinan4.addListener('click', function() {
+						infowindowConteudoFinan4.open(map, ServiçoFinan4);
+					  });
+					
+					var ServiçoFinan5 = new google.maps.Marker({
+					position: {lat: 38.7527559, lng: -9.2034885},
+					map: map
+					});
+					
+					var ConteudoFinan5 = 'Serviço de Finanças Lisboa 5 <br><br><a href="https://www.google.com/maps/dir//Servi%C3%A7o+de+Finan%C3%A7as+Lisboa+5,+Rua+Am%C3%A9lia+Rey+Cola%C3%A7o,+Lisboa/@38.7528145,-9.2737115,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1ecd2705d1de83:0xa0980aa8c488830!2m2!1d-9.2036709!2d38.7527015" target="_blank">Direções</a>';
+
+					  var infowindowConteudoFinan5 = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoFinan5+"</div>"
+					  });
+
+					  ServiçoFinan5.addListener('click', function() {
+						infowindowConteudoFinan5.open(map, ServiçoFinan5);
+					  });
+					  
+					
+					var ServiçoFinan6 = new google.maps.Marker({
+					position: {lat: 38.7739785, lng: -9.1137442},
+					map: map
+					});
+					
+					var ConteudoFinan6 = 'Serviço de Finanças Lisboa 6 <br><br><a href="https://www.google.com/maps/dir//Servi%C3%A7o+de+Finan%C3%A7as+de+Lisboa+6,+Rua+General+Silva+Freire,+Lisboa/@38.7741876,-9.1833986,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd19323cfee9ea6f:0xad99002f59ffe4d7!2m2!1d-9.113358!2d38.7740747" target="_blank">Direções</a>';
+
+					  var infowindowConteudoFinan6 = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoFinan6+"</div>"
+					  });
+
+					  ServiçoFinan6.addListener('click', function() {
+						infowindowConteudoFinan6.open(map, ServiçoFinan6);
+					  });
+					
+					var ServiçoFinan7 = new google.maps.Marker({
+					position: {lat: 38.7105974, lng: -9.2120262},
+					map: map
+					});
+					
+					var ConteudoFinan7 = 'Serviço de Finanças Lisboa 7 <br><br><a href="https://www.google.com/maps/dir//Servi%C3%A7o+de+Finan%C3%A7as+de+Lisboa+7,+Rua+Alfredo+Soares,+Lisboa/@38.7106812,-9.2817771,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1ecca1d639f90b:0xe8c4685dae871d46!2m2!1d-9.2117365!2d38.7105681" target="_blank">Direções</a>';
+
+					  var infowindowConteudoFinan7 = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoFinan7+"</div>"
+					  });
+
+					  ServiçoFinan7.addListener('click', function() {
+						infowindowConteudoFinan7.open(map, ServiçoFinan7);
+					  });
+					
+					var ServiçoFinan8 = new google.maps.Marker({
+					position: {lat: 38.7564775, lng: -9.1423421},
+					map: map
+					});
+					
+					var ConteudoFinan8 = 'Serviço de Finanças Lisboa 8 <br><br><a href="https://www.google.com/maps/dir//Servi%C3%A7o+de+Finan%C3%A7as+de+Lisboa+8,+Rua+Centro+Cultural,+Lisboa/@38.7563353,-9.2126724,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1932551e29c8d7:0xa999fb83f87f4882!2m2!1d-9.1426318!2d38.7562223" target="_blank">Direções</a>';
+
+					  var infowindowConteudoFinan8 = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoFinan8+"</div>"
+					  });
+
+					  ServiçoFinan8.addListener('click', function() {
+						infowindowConteudoFinan8.open(map, ServiçoFinan8);
+					  });
+					
+					var ServiçoFinan9 = new google.maps.Marker({
+					position: {lat: 38.7528275, lng: -9.1131928},
+					map: map
+					});
+					
+					var ConteudoFinan9 = 'Serviço de Finanças Lisboa 9 <br><br><a href="https://www.google.com/maps/dir//Servi%C3%A7o+de+Finan%C3%A7as+de+Lisboa+9,+Rua+Luiz+Pacheco,+Lisboa/@38.7530367,-9.1833621,12z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0xd1933e0dcf22473:0x49ec4407f482faf6!2m2!1d-9.1133215!2d38.7529237" target="_blank">Direções</a>';
+
+					  var infowindowConteudoFinan9 = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoFinan9+"</div>"
+					  });
+
+					  ServiçoFinan9.addListener('click', function() {
+						infowindowConteudoFinan9.open(map, ServiçoFinan9);
+					  });
+					
+					var ServiçoFinan10 = new google.maps.Marker({
+					position: {lat: 38.7302505, lng: -9.1468937},
+					map: map
+					});
+					
+					var ConteudoFinan10 = 'Serviço de Finanças Lisboa 10 <br><br><a href="https://www.google.com/maps/dir//Servi%C3%A7o+de+Finan%C3%A7as+de+Lisboa+10,+Avenida+Fontes+Pereira+de+Melo,+Lisboa/@38.7529028,-9.1833615,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd193375977dc473:0x8e4a86a44264802!2m2!1d-9.1467757!2d38.73033" target="_blank">Direções</a>';
+
+					  var infowindowConteudoFinan10 = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoFinan10+"</div>"
+					  });
+
+					  ServiçoFinan10.addListener('click', function() {
+						infowindowConteudoFinan10.open(map, ServiçoFinan10);
+					  });
+					
+					var ServiçoFinan11 = new google.maps.Marker({
+					position: {lat: 38.7736739, lng: -9.1601962},
+					map: map
+					});
+					
+					var ConteudoFinan11 = 'Serviço de Finanças Lisboa 11 <br><br><a href="https://www.google.com/maps/dir//Servi%C3%A7o+de+Finan%C3%A7as+de+Lisboa+11,+Rua+Rep%C3%BAblica+do+Paraguai,+Lisboa/@38.7735568,-9.230269,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1932eccfb3b411:0x15348b25afcc937f!2m2!1d-9.1602284!2d38.7734439" target="_blank">Direções</a>';
+
+					  var infowindowConteudoFinan11 = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoFinan11+"</div>"
+					  });
+
+					  ServiçoFinan11.addListener('click', function() {
+						infowindowConteudoFinan11.open(map, ServiçoFinan11);
+					  });
+					  
+					  var CentroApoio = new google.maps.Marker({
+					position: {lat: 38.724852, lng: -9.1345097},
+					map: map
+					});
+					
+					var ConteudoCentroApoio = 'Centro Nacional de Apoio ao Imigrante <br><br><a href="https://www.google.com/maps/dir//Centro+Nacional+de+Apoio+ao+Imigrante,+R.+%C3%81lvaro+Coutinho+14,+1150-025+Lisboa/@38.724852,-9.1345097,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd193390084e6e63:0x3eabeda533be5f08!2m2!1d-9.1344239!2d38.7249148" target="_blank">Direções</a>';
+
+					  var infowindowConteudoCentroApoio = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoCentroApoio+"</div>"
+					  });
+
+					  CentroApoio.addListener('click', function() {
+						infowindowConteudoCentroApoio.open(map, CentroApoio);
+					  });
+					  
+					  var JRS = new google.maps.Marker({
+					position: {lat: 38.7834921, lng: -9.149664},
+					map: map
+					});
+					
+					var ConteudoJRS = 'Centro de Suporte para a Integração de Imigrantes <br><br><a href="https://www.google.com/maps/dir//JRS+Portugal,+R.+Rog%C3%A9rio+de+Moura+59,+1750-342+Lisboa/@38.7833795,-9.1498354,17.25z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd193288e9fcfdad:0x4916318f30b7d66f!2m2!1d-9.149625!2d38.783605" target="_blank">Direções</a>';
+
+					  var infowindowConteudoJRS = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoJRS+"</div>"
+					  });
+
+						JRS.addListener('click', function() {
+						infowindowConteudoJRS.open(map, JRS);
+					  });
+					  
+					  var RegCentral = new google.maps.Marker({
+					position: {lat: 38.7281274, lng: -9.1580141},
+					map: map
+					});
+					
+					var ConteudoRegCentral = 'Registo Central<br><br><a href="https://www.google.com/maps/dir//Registos+Centrais,+Rua+Rodrigo+da+Fonseca,+Lisboa/@38.7833795,-9.1498354,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1933704f6b92c9:0xefd4d0eb314c4da2!2m2!1d-9.1578532!2d38.7282739" target="_blank">Direções</a>';
+
+					  var infowindowConteudoRegCentral = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoRegCentral+"</div>"
+					  });
+
+						RegCentral.addListener('click', function() {
+						infowindowConteudoRegCentral.open(map, RegCentral);
+					  });
+					  
+					  /*var RegCivil = new google.maps.Marker({
+					position: {lat: 38.7305019, lng: -9.1584206},
+					map: map
+					});
+					
+					var ConteudoRegCivil = 'Registo Civil<br><br><a href="https://www.google.com/maps/dir//Registos+Centrais,+Rua+Rodrigo+da+Fonseca,+Lisboa/@38.7833795,-9.1498354,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1933704f6b92c9:0xefd4d0eb314c4da2!2m2!1d-9.1578532!2d38.7282739" target="_blank">Direções</a>';
+
+					  var infowindowConteudoRegCivil = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoRegCivil+"</div>"
+					  });
+
+						RegCivil.addListener('click', function() {
+						infowindowConteudoRegCivil.open(map, RegCivil);
+					  });
+					  */
+					  
+					  var RegistoBenfica = new google.maps.Marker({
+					position: {lat: 38.749718, lng: -9.185546},
+					map: map
+					});
+					
+					var ConteudoRegBenfica = 'Espaço Registos de Lisboa (Benfica)<br><br><a href="https://www.google.com/maps/dir//Espa%C3%A7o+Registos+de+Lisboa+(Benfica),+R.+Augusto+Pina,+1500-065+Lisboa/@38.7483197,-9.1854907,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd19332a4154ac05:0x4e12e39da4ae64c7!2m2!1d-9.1860779!2d38.7495977" target="_blank">Direções</a>';
+
+					  var infowindowConteudoRegBenfica = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoRegBenfica+"</div>"
+					  });
+
+						RegistoBenfica.addListener('click', function() {
+						infowindowConteudoRegBenfica.open(map, RegistoBenfica);
+					  });
+					  
+					   var CartorioAreeiro = new google.maps.Marker({
+					position: {lat: 38.738648, lng: -9.132627},
+					map: map
+					});
+					
+					var ConteudoCartorioAreeiro = 'Cartório (Areeiro)<br><br><a href="https://www.google.com/maps/dir//Cart%C3%B3rio+Notarial+Isabel+Catarina+Ferreira,+Av.+Alm.+Reis+202,+1900-221+Lisboa/@38.7387696,-9.1343113,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1933bcb8837231:0xfd99d7c52a628d18!2m2!1d-9.1336167!2d38.7384487" target="_blank">Direções</a>';
+
+					  var infowindowConteudoCartorioAreeiro = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoCartorioAreeiro+"</div>"
+					  });
+
+						CartorioAreeiro.addListener('click', function() {
+						infowindowConteudoCartorioAreeiro.open(map, CartorioAreeiro);
+					  });
+					
+					 var CartorioEXPO = new google.maps.Marker({
+					position: {lat: 38.774944, lng: -9.096563},
+					map: map
+					});
+					
+					var ConteudoCartorioEXPO = 'Cartório (EXPO)<br><br><a href="https://www.google.com/maps/dir//Instituto+dos+Registos+e+do+Notariado,+Campus+de+Justi%C3%A7a+de+Lisboa,+1990-097+Lisboa/@38.7749697,-9.0967637,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd19318bf8150277:0x875a0e13e4fad42f!2m2!1d-9.0966733!2d38.774876" target="_blank">Direções</a>';
+
+					  var infowindowConteudoCartorioEXPO = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoCartorioEXPO+"</div>"
+					  });
+
+						CartorioEXPO.addListener('click', function() {
+						infowindowConteudoCartorioEXPO.open(map, CartorioEXPO);
+					  });
+					
+					var DelegacaoLisboaTejo = new google.maps.Marker({
+					position: {lat: 38.753648 , lng: -9.143454 },
+					map: map
+					});
+					
+					var ConteudoDelegacaoLisboaTejo = 'Delegação Regional de Lisboa e Vale do Tejo<br><br><a href="https://www.google.com/maps/dir//DSRLVT-+Dire%C3%A7%C3%A3o+de+Servi%C3%A7os+Regi%C3%A3o+Lisboa+e+Vale+do+Tejo,+Pra%C3%A7a+Alvalade+12,+1700-036+Lisboa/@38.7510625,-9.1475307,16z/data=!4m15!1m6!3m5!1s0xd1933aac67a47e5:0x1d7f80dcf38ff58!2sDSRLVT-+Dire%C3%A7%C3%A3o+de+Servi%C3%A7os+Regi%C3%A3o+Lisboa+e+Vale+do+Tejo!8m2!3d38.7536328!4d-9.143583!4m7!1m0!1m5!1m1!1s0xd1933aac67a47e5:0x1d7f80dcf38ff58!2m2!1d-9.143583!2d38.7536328" target="_blank">Direções</a>';
+
+					  var infowindowConteudoDelegacaoLisboaTejo = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoDelegacaoLisboaTejo+"</div>"
+					  });
+
+						DelegacaoLisboaTejo.addListener('click', function() {
+						infowindowConteudoDelegacaoLisboaTejo.open(map, DelegacaoLisboaTejo);
+					  });
+					  
+					  var EmpregoBenfica = new google.maps.Marker({
+					position: {lat: 38.754332, lng: -9.205659},
+					map: map
+					});
+					
+					var ConteudoEmpregoBenfica = 'Centro de Emprego de Benfica<br><br><a href="https://www.google.com/maps/dir//Centro+De+Emprego+Benfica,+R.+Pedralvas+15,+1500-487+Lisboa/@38.7542713,-9.2080886,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1ecd26afeb0937:0xcaf65c9e6a12c753!2m2!1d-9.2058999!2d38.7542671" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmpregoBenfica = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoEmpregoBenfica+"</div>"
+					  });
+
+						EmpregoBenfica.addListener('click', function() {
+						infowindowConteudoEmpregoBenfica.open(map, EmpregoBenfica);
+					  });
+					  
+					  var EmpregoPicoa = new google.maps.Marker({
+					position: {lat: 38.734683, lng: -9.146765},
+					map: map
+					});
+					
+					var ConteudoEmpregoPicoa = 'Centro de Emprego de Picoa<br><br><a href="https://www.google.com/maps/dir//Centro+Emprego+Picoas,+Avenida+5+de+Outubro+24,+1050-053+Lisboa/@38.7345847,-9.1473389,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd19330abf644051:0x92662ae1a7cff12f!2m2!1d-9.1469714!2d38.7346098" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmpregoPicoa = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoEmpregoPicoa+"</div>"
+					  });
+
+						EmpregoPicoa.addListener('click', function() {
+						infowindowConteudoEmpregoPicoa.open(map, EmpregoPicoa);
+					  });
+					  
+					  var HospitalSantaMaria = new google.maps.Marker({
+					position: {lat: 38.748580, lng: -9.160513},
+					map: map
+					});
+					
+					var ConteudoHospitalSantaMaria = 'Hospital Santa Maria<br><br><a href="https://www.google.pt/maps/dir//Hospital+de+Santa+Maria,+Av.+Prof.+Egas+Moniz,+1649-035+Lisboa/@38.748611,-9.1610759,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd19331c413c5d05:0xe887dbd851b01b45!2m2!1d-9.160695!2d38.748496?hl=pt-PT" target="_blank">Direções</a>';
+
+					  var infowindowConteudoHospitalSantaMaria = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoHospitalSantaMaria+"</div>"
+					  });
+
+						HospitalSantaMaria.addListener('click', function() {
+						infowindowConteudoHospitalSantaMaria.open(map, HospitalSantaMaria);
+					  });
+					  
+					  var HospitalPulido = new google.maps.Marker({
+					position: {lat: 38.764629, lng: -9.157066},
+					map: map
+					});
+					
+					var ConteudoHospitalPulido = 'Hospital Pulido Valente<br><br><a href="https://www.google.pt/maps/dir//Hospital+Pulido+Valente,+1750-147+Lisboa/@38.7646777,-9.1568054,19z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1932efe351745f:0x974702c746cc64a8!2m2!1d-9.157!2d38.764567?hl=pt-PT" target="_blank">Direções</a>';
+
+					  var infowindowConteudoHospitalPulido = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoHospitalPulido + "</div>"
+					  });
+
+						HospitalPulido.addListener('click', function() {
+						infowindowConteudoHospitalPulido.open(map, HospitalPulido);
+					  });
+					  
+					  var HospitalSaoJose = new google.maps.Marker({
+					position: {lat: 38.717179, lng: -9.137044},
+					map: map
+					});
+					
+					var ConteudoHospitalSaoJose = 'Hospital São José <br><br><a href="https://www.google.pt/maps/dir//Hospital+de+S%C3%A3o+Jos%C3%A9,+R.+Jos%C3%A9+Ant%C3%B3nio+Serrano,+1150-199+Lisboa/@38.7164575,-9.1365775,18z/data=!4m15!1m6!3m5!1s0xd1933865774c0b5:0xb7fc62a04d9a69bf!2sHospital+de+S%C3%A3o+Jos%C3%A9!8m2!3d38.7171209!4d-9.1370871!4m7!1m0!1m5!1m1!1s0xd1933865774c0b5:0xb7fc62a04d9a69bf!2m2!1d-9.1370871!2d38.7171209?hl=pt-PT" target="_blank">Direções</a>';
+
+					  var infowindowConteudoHospitalSaoJose = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoHospitalSaoJose + "</div>"
+					  });
+
+						HospitalSaoJose.addListener('click', function() {
+						infowindowConteudoHospitalSaoJose.open(map, HospitalSaoJose);
+					  });
+					
+					var HospitalCurry = new google.maps.Marker({
+					position: {lat: 38.741593, lng: -9.151899},
+					map: map
+					});
+					
+					var ConteudoHospitalCurry = 'Hospital Curry Cabral <br><br><a href="https://www.google.pt/maps/dir//Hospital+Curry+Cabral,+R.+Benefic%C3%AAncia+8,+1050-099+Lisboa/@38.7417754,-9.1523389,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1933089f4dace9:0xdda58cca1ca55738!2m2!1d-9.1519634!2d38.7415223?hl=pt-PT" target="_blank">Direções</a>';
+
+					  var infowindowConteudoHospitalCurry = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoHospitalCurry + "</div>"
+					  });
+
+						HospitalCurry.addListener('click', function() {
+						infowindowConteudoHospitalCurry.open(map, HospitalCurry);
+					  });
+					
+					var HospitalDona = new google.maps.Marker({
+					position: {lat: 38.728286, lng: -9.139217},
+					map: map
+					});
+					
+					var ConteudoHospitalDona = 'Hospital Dona Estefânia <br><br><a href="https://www.google.pt/maps/dir//Dona+Estef%C3%A2nia,+R.+Jacinta+Marto,+1169-045+Lisboa/@38.7282879,-9.1398718,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd19339bef91b391:0xc9266f0245376fbe!2m2!1d-9.139271!2d38.728244?hl=pt-PT" target="_blank">Direções</a>';
+
+					  var infowindowConteudoHospitalDona = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoHospitalDona + "</div>"
+					  });
+
+						HospitalDona.addListener('click', function() {
+						infowindowConteudoHospitalDona.open(map, HospitalDona);
+					  });
+					  
+					  var HospitalSantaMarta = new google.maps.Marker({
+					position: {lat: 38.723592, lng: -9.145520},
+					map: map
+					});
+					
+					var ConteudoHospitalSantaMarta = 'Hospital Santa Marta <br><br><a href="https://www.google.pt/maps/dir//Hospital+de+Santa+Marta,+1169-024,+R.+de+Santa+Marta+50,+1150-299+Lisboa/@38.7237086,-9.1461579,17.75z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd193377db601807:0x690dfa1c45dc4c48!2m2!1d-9.1455818!2d38.7235229?hl=pt-PT" target="_blank">Direções</a>';
+
+					  var infowindowConteudoHospitalSantaMarta = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoHospitalSantaMarta + "</div>"
+					  });
+
+						HospitalSantaMarta.addListener('click', function() {
+						infowindowConteudoHospitalSantaMarta.open(map, HospitalSantaMarta);
+					  });
+					
+					 var HospitalSantoAnt = new google.maps.Marker({
+					position: {lat: 38.721932, lng: -9.142453},
+					map: map
+					});
+					
+					var ConteudoHospitalSantoAnt = 'Hospital Santo António dos Capuchos <br><br><a href="https://www.google.pt/maps/dir//Hospital+de+Santo+Ant%C3%B3nio+dos+Capuchos,+Lisboa/@38.7220508,-9.1427322,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd19338318cf7ee5:0xefaba8dc32835b82!2m2!1d-9.142502!2d38.7218692?hl=pt-PT" target="_blank">Direções</a>';
+
+					  var infowindowConteudoHospitalSantoAnt = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoHospitalSantoAnt+ "</div>"
+					  });
+
+						HospitalSantoAnt.addListener('click', function() {
+						infowindowConteudoHospitalSantoAnt.open(map, HospitalSantoAnt);
+					  });
+					
+					 var Maternidade = new google.maps.Marker({
+					position: {lat: 38.732742, lng: -9.147464},
+					map: map
+					});
+					
+					var ConteudoMaternidade = 'Maternidade Doutor Alfredo da Costa <br><br><a href="https://www.google.pt/maps/dir//Maternidade+Doutor+Alfredo+da+Costa,+R.+Viriato+1,+1050-010+Lisboa/@38.7328273,-9.1473944,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd193375060c7faf:0x5dfb18de65b7f455!2m2!1d-9.1475178!2d38.7326746?hl=pt-PT" target="_blank">Direções</a>';
+
+					  var infowindowConteudoMaternidade = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoMaternidade+ "</div>"
+					  });
+
+						Maternidade.addListener('click', function() {
+						infowindowConteudoMaternidade.open(map, Maternidade);
+					  });
+					
+					var HospitalFrancisco = new google.maps.Marker({
+					position: {lat: 38.707180, lng: -9.218292},
+					map: map
+					});
+					
+					var ConteudoFrancisco = 'Hospital de São Francisco Xavier <br><br><a href="https://www.google.pt/maps/dir//Hospital+de+S%C3%A3o+Francisco+Xavier,+Estr.+Forte+do+Alto+Duque,+1449-005+Lisboa/@38.7074098,-9.2197621,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1ecc9dfe5bed8d:0x4df434601f4bf297!2m2!1d-9.2182922!2d38.7070875?hl=pt-PT" target="_blank">Direções</a>';
+
+					  var infowindowConteudoFrancisco= new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoFrancisco+ "</div>"
+					  });
+
+						HospitalFrancisco.addListener('click', function() {
+						infowindowConteudoFrancisco.open(map, HospitalFrancisco);
+					  });
+					  
+					  var HospitalSantaCruz = new google.maps.Marker({
+					position: {lat: 38.727096, lng: -9.233863},
+					map: map
+					});
+					
+					var ConteudoSantaCruz = 'Hospital Santa Cruz <br><br><a href="https://www.google.pt/maps/dir//Hospital+Santa+Cruz+(Centro+Hospitalar+de+Lisboa+Ocidental,+EPE),+Av.+Prof.+Dr.+Reinaldo+dos+Santos+27-29,+Carnaxide/@38.7270351,-9.2341791,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1ecc8aad31bc57:0x90438968882f516!2m2!1d-9.2338733!2d38.7269912?hl=pt-PT" target="_blank">Direções</a>';
+
+					  var infowindowConteudoSantaCruz= new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoSantaCruz+ "</div>"
+					  });
+
+						HospitalSantaCruz.addListener('click', function() {
+						infowindowConteudoSantaCruz.open(map, HospitalSantaCruz);
+					  });
+					  
+					  var HospitalEgas = new google.maps.Marker({
+					position: {lat: 38.699807, lng: -9.188164},
+					map: map
+					});
+					
+					var ConteudoEga = 'Hospital Egas Moniz <br><br><a href="https://www.google.pt/maps/dir//Hospital+Egas+Moniz,+Rua+da+Junqueira,+Lisboa/@38.6998201,-9.2582586,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1934ad65c6cdaf:0x50edf6eac81c5bd3!2m2!1d-9.188218!2d38.699707?hl=pt-PT" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEga= new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoEga+ "</div>"
+					  });
+
+						HospitalEgas.addListener('click', function() {
+						infowindowConteudoEga.open(map, HospitalEgas);
+					  });
+					  
+					  var HospitalJulio = new google.maps.Marker({
+					position: {lat: 38.758142, lng: -9.146476},
+					map: map
+					});
+					
+					var ConteudoJulio = 'Centro Hospitalar Psiquiátrico de Lisboa <br><br><a href="https://www.google.pt/maps/dir//Hospital+J%C3%BAlio+de+Matos+(Centro+Hospitalar+Psiqui%C3%A1trico+de+Lisboa),+Av.+do+Brasil+53,+Lisboa/@38.7582551,-9.1475379,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1932ff696fea7b:0x2d5f0e40c8d7c471!2m2!1d-9.1466045!2d38.758025?hl=pt-PT" target="_blank">Direções</a>';
+
+					  var infowindowConteudoJulio= new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoJulio+ "</div>"
+					  });
+
+						HospitalJulio.addListener('click', function() {
+						infowindowConteudoJulio.open(map, HospitalJulio);
+					  });
+					  
+					  var Oftal = new google.maps.Marker({
+					position: {lat: 38.722122, lng: -9.144262},
+					map: map
+					});
+					
+					var ConteudoOftal = 'Instituto de Oftalmologia Dr. Gama Pinto <br><br><a href="https://www.google.pt/maps/dir//Instituto+de+Oftalmologia+Doutor+Gama+Pinto,+Tv.+Larga+2,+1150-123+Lisboa/@38.7221705,-9.1443107,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd193382c0797711:0x2d12b7b7951bd90a!2m2!1d-9.1443!2d38.722068?hl=pt-PT" target="_blank">Direções</a>';
+
+					  var infowindowConteudoOftal = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoOftal+ "</div>"
+					  });
+
+						Oftal.addListener('click', function() {
+						infowindowConteudoOftal.open(map, Oftal);
+					  });
+					  
+					  var Oncologia = new google.maps.Marker({
+					position: {lat: 38.740042, lng: -9.161136},
+					map: map
+					});
+					
+					var ConteudoOncologia = 'Instituto Português de Oncologia Francisco Gentil <br><br><a href="https://www.google.pt/maps/dir//Instituto+Portugu%C3%AAs+de+Oncologia+Francisco+Gentil,+R.+Prof.+Lima+Basto,+Lisboa/@38.7398702,-9.1635497,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd193311267fec85:0x17e36507b6c61cdf!2m2!1d-9.161361!2d38.739866?hl=pt-PT" target="_blank">Direções</a>';
+
+					  var infowindowConteudoOncologia = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoOncologia+ "</div>"
+					  });
+
+						Oncologia.addListener('click', function() {
+						infowindowConteudoOncologia.open(map, Oncologia);
+					  });
+					  
+					   var Aeroporto = new google.maps.Marker({
+					position: {lat: 38.775380, lng: -9.136068},
+					map: map
+					});
+					
+					var ConteudoAeroporto = 'Aeroporto da Portela - Lisboa <br><br><a href="https://www.google.com/maps/dir//Aeroporto+de+Lisboa+(LIS),+Alameda+das+Comunidades+Portuguesas,+1700-111+Lisboa/@38.7755978,-9.1375554,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd19324616d90183:0xa66a53e58036d46!2m2!1d-9.1353667!2d38.7755936" target="_blank">Direções</a>';
+
+					  var infowindowConteudoAeroporto = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoAeroporto+ "</div>"
+					  });
+
+						Aeroporto.addListener('click', function() {
+						infowindowConteudoAeroporto.open(map, Aeroporto);
+					  });
+					  
+					   var CentroSeteRios = new google.maps.Marker({
+					position: {lat: 38.739527, lng: -9.168930},
+					map: map
+					});
+					
+					var ConteudoCentroSeteRios = 'Centro de Saúde Sete Rios <br><br><a href="https://www.google.com/maps/dir//Centro+de+Sa%C3%BAde+Sete+Rios,+Largo+Prof.+Arnaldo+Sampaio,+Lisboa/@38.7412322,-9.1809514,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd19333d77ec455f:0xf72cbb44c962e357!2m2!1d-9.168506!2d38.7396924" target="_blank">Direções</a>';
+
+					  var infowindowConteudoCentroSeteRios = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoCentroSeteRios+ "</div>"
+					  });
+
+						CentroSeteRios.addListener('click', function() {
+						infowindowConteudoCentroSeteRios.open(map, CentroSeteRios);
+					  });
+					  
+					  var CuidadosAlvalade = new google.maps.Marker({
+					position: {lat: 38.7595566, lng: -9.149009},
+					map: map
+					});
+					
+					var ConteudoCuidadosAlvalade = 'Unidade de Cuidados de Saúde Personalizada (UCSP) Alvalade <br><br><a href="https://www.google.com/maps/dir//Centro+de+Sa%C3%BAde+de+Alvalade+%2F+Clinica+Da+Juventude+Alvalade,+Lisboa/@38.7594985,-9.1490418,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1932f92d82f869:0x521d3b95021cc0ce!2m2!1d-9.1490418!2d38.7594985" target="_blank">Direções</a>';
+
+					  var infowindowConteudoCuidadosAlvalade = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoCuidadosAlvalade+ "</div>"
+					  });
+
+						CuidadosAlvalade.addListener('click', function() {
+						infowindowConteudoCuidadosAlvalade.open(map, CuidadosAlvalade);
+					  });
+					/*
+					var CuidadosParque = new google.maps.Marker({
+					position: {lat: 38.7595566, lng: -9.149009},
+					map: map
+					});
+					
+					var ConteudoCuidadosParque = 'Unidade de Saúde da Família (USF) Parque <br><br><a href="https://www.google.com/maps/dir//Centro+de+Sa%C3%BAde+de+Alvalade+%2F+Clinica+Da+Juventude+Alvalade,+Lisboa/@38.7594985,-9.1490418,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1932f92d82f869:0x521d3b95021cc0ce!2m2!1d-9.1490418!2d38.7594985" target="_blank">Direções</a>';
+
+					  var infowindowConteudoCuidadosParque = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoCuidadosParque+ "</div>"
+					  });
+
+						CuidadosParque.addListener('click', function() {
+						infowindowConteudoCuidadosParque.open(map, CuidadosParque);
+					  });
+					*/
+					
+					var CuidadosBenfica = new google.maps.Marker({
+					position: {lat: 38.748759, lng: -9.200250},
+					map: map
+					});
+					
+					var ConteudoCuidadosBenfica = 'Unidade de Cuidados de Saúde Personalizada (UCSP) Benfica <br><br><a href="https://www.google.com/maps/dir//Unidade+de+Cuidados+de+Sa%C3%BAde+Personalizados+de+Benfica,+R.+Gen.+Morais+Sarmento+13,+1500-018+Lisboa/@38.7490351,-9.2005931,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1eccd7b91f3ad1:0x913737a518e8ea91!2m2!1d-9.2004867!2d38.7486374" target="_blank">Direções</a>';
+
+					  var infowindowConteudoCuidadosBenfica = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoCuidadosBenfica+ "</div>"
+					  });
+
+						CuidadosBenfica.addListener('click', function() {
+						infowindowConteudoCuidadosBenfica.open(map, CuidadosBenfica);
+					  });
+					
+					var CuidadosCarnide = new google.maps.Marker({
+					position: {lat: 38.760630, lng: -9.193498},
+					map: map
+					});
+					
+					var ConteudoCuidadosCarnide = 'Unidade de Cuidados de Saúde da Família (USF) Carnide Quer <br><br><a href="https://www.google.com/maps/dir//USF+Carnide+Quer,+Estr.+Correia+53,+1500-210+Lisboa/@38.7606992,-9.193654,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1ecd2d8f1110c1:0x5bb9621844b10436!2m2!1d-9.1934823!2d38.7605842" target="_blank">Direções</a>';
+
+					  var infowindowConteudoCuidadosCarnide = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoCuidadosCarnide+ "</div>"
+					  });
+
+						CuidadosCarnide.addListener('click', function() {
+						infowindowConteudoCuidadosCarnide.open(map, CuidadosCarnide);
+					  });
+					
+					var CuidadosGera = new google.maps.Marker({
+					position: {lat: 38.750473, lng: -9.194307},
+					map: map
+					});
+					
+					var ConteudoCuidadosGera = 'Unidade de Cuidados de Saúde da Família (USF) Gerações <br><br><a href="https://www.google.com/maps/dir//Unidade+De+Sa%C3%BAde+Familiar+Gera%C3%A7%C3%B5es+-+CS+Benfica,+1500+500,+R.+Dr.+Jos%C3%A9+Baptista+de+Sousa+15+4%C2%BA+andar,+1500-083+Lisboa/@38.750427,-9.1957229,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1eccd5f5d1812f:0xf30977f067fc9587!2m2!1d-9.1943711!2d38.7504228" target="_blank">Direções</a>';
+
+					  var infowindowConteudoCuidadosGera = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoCuidadosGera+ "</div>"
+					  });
+
+						CuidadosGera.addListener('click', function() {
+						infowindowConteudoCuidadosGera.open(map, CuidadosGera);
+					  });
+					  /*
+					  var CuidadosGera2 = new google.maps.Marker({
+					position: {lat: 38.750473, lng: -9.194307},
+					map: map
+					});
+					
+					var ConteudoCuidadosGera2 = 'Unidade de Cuidados de Saúde da Família (USF) Gerações - Nova Geração(2º Polo) <br><br><a href="https://www.google.com/maps/dir//Unidade+De+Sa%C3%BAde+Familiar+Gera%C3%A7%C3%B5es+-+CS+Benfica,+1500+500,+R.+Dr.+Jos%C3%A9+Baptista+de+Sousa+15+4%C2%BA+andar,+1500-083+Lisboa/@38.750427,-9.1957229,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1eccd5f5d1812f:0xf30977f067fc9587!2m2!1d-9.1943711!2d38.7504228" target="_blank">Direções</a>';
+
+					  var infowindowConteudoCuidadosGera2 = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoCuidadosGera2+ "</div>"
+					  });
+
+						CuidadosGera2.addListener('click', function() {
+						infowindowConteudoCuidadosGera2.open(map, CuidadosGera2);
+					  });
+					*/
+					
+					/*
+					var CuidadosLuz = new google.maps.Marker({
+					position: {lat: 38.750473, lng: -9.194307},
+					map: map
+					});
+					
+					var ConteudoCuidadosLuz = 'Unidade de Cuidados de Saúde da Família (USF) Luz <br><br><a href="https://www.google.com/maps/dir//Unidade+De+Sa%C3%BAde+Familiar+Gera%C3%A7%C3%B5es+-+CS+Benfica,+1500+500,+R.+Dr.+Jos%C3%A9+Baptista+de+Sousa+15+4%C2%BA+andar,+1500-083+Lisboa/@38.750427,-9.1957229,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1eccd5f5d1812f:0xf30977f067fc9587!2m2!1d-9.1943711!2d38.7504228" target="_blank">Direções</a>';
+
+					  var infowindowConteudoCuidadosLuz = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoCuidadosLuz+ "</div>"
+					  });
+
+						CuidadosLuz.addListener('click', function() {
+						infowindowConteudoCuidadosLuz.open(map, CuidadosLuz);
+					  });
+					*/
+					
+					var CuidadosRodrigues = new google.maps.Marker({
+					position: {lat: 38.746133, lng: -9.190122},
+					map: map
+					});
+					
+					var ConteudoCuidadosRodrigues = 'Unidade de Cuidados de Saúde da Família (USF) Rodrigues Migueis <br><br><a href="https://www.google.pt/maps/dir//USF+Rodrigues+Migueis,+R.+Ten-Cel.+Ribeiro+dos+Reis,+1500-081+Lisboa/@38.7462798,-9.1907871,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1eccd4ad4f9615:0x4fae9a9532871614!2m2!1d-9.1902077!2d38.746033" target="_blank">Direções</a>';
+
+					  var infowindowConteudoCuidadosRodrigues = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoCuidadosRodrigues+ "</div>"
+					  });
+
+						CuidadosRodrigues.addListener('click', function() {
+						infowindowConteudoCuidadosRodrigues.open(map, CuidadosRodrigues);
+					  });
+					/*
+					var CuidadosJesus = new google.maps.Marker({
+					position: {lat: 38.746133, lng: -9.190122},
+					map: map
+					});
+					
+					var ConteudoCuidadosJesus = 'Unidade de Cuidados de Saúde Personalizados (USCP) Coração de Jesus <br><br><a href="https://www.google.pt/maps/dir//USF+Rodrigues+Migueis,+R.+Ten-Cel.+Ribeiro+dos+Reis,+1500-081+Lisboa/@38.7462798,-9.1907871,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1eccd4ad4f9615:0x4fae9a9532871614!2m2!1d-9.1902077!2d38.746033" target="_blank">Direções</a>';
+
+					  var infowindowConteudoCuidadosJesus = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoCuidadosJesus+ "</div>"
+					  });
+
+						CuidadosJesus.addListener('click', function() {
+						infowindowConteudoCuidadosJesus.open(map, CuidadosJesus);
+					  });
+					*/
+					/*
+					var CuidadosLumiar = new google.maps.Marker({
+					position: {lat: 38.773006, lng: -9.160673},
+					map: map
+					});
+					
+					var ConteudoCuidadosLumiar = 'Centro Saúde do Lumiar  <br><br><a href="https://www.google.pt/maps/dir//Centro+Sa%C3%BAde+do+Lumiar,+5%C2%B0%2F6%C2%B0,+144,+Alameda+das+Linhas+de+Torres+243,+1750-144+Lisboa/@38.7616959,-9.2474475,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1932ec93b8d0c7:0xe5db16b76747dc9!2m2!1d-9.1610325!2d38.7721955" target="_blank">Direções</a>';
+
+					  var infowindowConteudoCuidadosLumiar = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoCuidadosLumiar+ "</div>"
+					  });
+
+						CuidadosLumiar.addListener('click', function() {
+						infowindowConteudoCuidadosLumiar.open(map, CuidadosLumiar);
+					  });
+					 */ 
+					  var CuidadosCharneca = new google.maps.Marker({
+					position: {lat: 38.626992, lng: -9.199440},
+					map: map
+					});
+					
+					var ConteudoCuidadosCharneca = 'Unidade Cuidados Saúde Personalizados Charneca da Caparica  <br><br><a href="https://www.google.pt/maps/dir//Unidade+Cuidados+Sa%C3%BAde+Personalizados+Charneca+da+Caparica,+R.+Henrique+Santana+20,+2820-225+Charneca+de+Caparica/@38.6271805,-9.2000198,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1ecaa8113f6065:0xf560a1cd7993a16e!2m2!1d-9.1994512!2d38.6269375" target="_blank">Direções</a>';
+
+					  var infowindowConteudoCuidadosCharneca = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoCuidadosCharneca+ "</div>"
+					  });
+
+						CuidadosCharneca.addListener('click', function() {
+						infowindowConteudoCuidadosCharneca.open(map, CuidadosCharneca);
+					  });
+					  
+					  var CuidadosAltoLumiar = new google.maps.Marker({
+					position: {lat: 38.773006, lng: -9.160673},
+					map: map
+					});
+					
+					var ConteudoCuidadosAltoLumiar = 'Unidade Cuidados Saúde Personalizados (USCP) Alto do Lumiar <br><br><a href="https://www.google.pt/maps/dir//Centro+Sa%C3%BAde+do+Lumiar,+5%C2%B0%2F6%C2%B0,+144,+Alameda+das+Linhas+de+Torres+243,+1750-144+Lisboa/@38.7616959,-9.2474475,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1932ec93b8d0c7:0xe5db16b76747dc9!2m2!1d-9.1610325!2d38.7721955" target="_blank">Direções</a>';
+
+					  var infowindowConteudoCuidadosAltoLumiar = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoCuidadosAltoLumiar+ "</div>"
+					  });
+
+						CuidadosAltoLumiar.addListener('click', function() {
+						infowindowConteudoCuidadosAltoLumiar.open(map, CuidadosAltoLumiar);
+					  });
+					
+					var CuidadosConcha = new google.maps.Marker({
+					position: {lat: 38.772331, lng: -9.160989},
+					map: map
+					});
+					
+					var ConteudoCuidadosConcha = 'Unidade de Saude da Familia (USF) Concha <br><br><a href="https://www.google.pt/maps/dir//USF+das+Conchas,+Alameda+das+Linhas+de+Torres+243,+1750-144+Lisboa/@38.7726697,-9.1614827,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1932ec937987b5:0x5bfef13bba38a482!2m2!1d-9.1609892!2d38.7723059" target="_blank">Direções</a>';
+
+					  var infowindowConteudoCuidadosAltoLumiar = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoCuidadosAltoLumiar+ "</div>"
+					  });
+
+						CuidadosAltoLumiar.addListener('click', function() {
+						infowindowConteudoCuidadosAltoLumiar.open(map, CuidadosAltoLumiar);
+					  });
+					  /*
+					  var CuidadosTelheiras= new google.maps.Marker({
+					position: {lat: 38.772331, lng: -9.160989},
+					map: map
+					});
+					
+					var ConteudoCuidadosTelheira = 'Unidade de Saude de Telheiras <br><br><a href="https://www.google.pt/maps/dir//USF+das+Conchas,+Alameda+das+Linhas+de+Torres+243,+1750-144+Lisboa/@38.7726697,-9.1614827,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1932ec937987b5:0x5bfef13bba38a482!2m2!1d-9.1609892!2d38.7723059" target="_blank">Direções</a>';
+
+					  var infowindowConteudoCuidadosTelheira = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoCuidadosTelheira+ "</div>"
+					  });
+
+						CuidadosTelheiras.addListener('click', function() {
+						infowindowConteudoCuidadosTelheira.open(map, CuidadosTelheiras);
+					  });
+					*/
+					
+					 var CuidadosSeteRios = new google.maps.Marker({
+					position: {lat: 38.740378, lng: -9.168274},
+					map: map
+					});
+					
+					var ConteudoCuidadosSeteRios = 'Centro de Saúde Sete Rios <br><br><a href="https://www.google.pt/maps/dir//Centro+de+Sa%C3%BAde+Sete+Rios,+Largo+Prof.+Arnaldo+Sampaio,+Lisboa/@38.7392401,-9.1944522,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd19333d77ec455f:0xf72cbb44c962e357!2m2!1d-9.168506!2d38.7396924" target="_blank">Direções</a>';
+
+					  var infowindowConteudoCuidadosSeteRios = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoCuidadosSeteRios+ "</div>"
+					  });
+
+						CuidadosSeteRios.addListener('click', function() {
+						infowindowConteudoCuidadosSeteRios.open(map, CuidadosSeteRios);
+					  });
+					  
+					  var CuidadosTilias = new google.maps.Marker({
+					position: {lat: 38.740890, lng: -9.172933},
+					map: map
+					});
+					
+					var ConteudoCuidadosTilias = 'Unidade de Cuidados de Saúde Familiar Tílias <br><br><a href="https://www.google.pt/maps/dir//USF+T%C3%ADlias+(Unidade+de+Sa%C3%BAde+Familiar+T%C3%ADlias),+Bloco+B-1.%C2%BA+091,+R.+Padre+Carlos+dos+Santos,+Lisboa/@38.7409273,-9.174564,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd19333ca16710af:0x115f621338034f8c!2m2!1d-9.1729761!2d38.740806" target="_blank">Direções</a>';
+
+					  var infowindowConteudoCuidadosTilias = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoCuidadosTilias+ "</div>"
+					  });
+
+						CuidadosTilias.addListener('click', function() {
+						infowindowConteudoCuidadosTilias.open(map, CuidadosTilias);
+					  });
+					  
+					  var CuidadosAlameda = new google.maps.Marker({
+					position: {lat: 38.736582, lng: -9.131294},
+					map: map
+					});
+					
+					var ConteudoCuidadosAlameda = 'Centro de Saúde Alameda <br><br><a href="https://www.google.com/maps/dir//Centro+de+Sa%C3%BAde+Alameda,+R.+Carvalho+Ara%C3%BAjo+103,+1900-138+Lisboa/@38.7365023,-9.1313583,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1933bda40669f9:0x3215fdea975fc055!2m2!1d-9.1313583!2d38.7365023" target="_blank">Direções</a>';
+
+					  var infowindowConteudoCuidadosAlameda = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoCuidadosAlameda+ "</div>"
+					  });
+
+						CuidadosAlameda.addListener('click', function() {
+						infowindowConteudoCuidadosAlameda.open(map, CuidadosAlameda);
+					  });
+					
+					 var CuidadosArco = new google.maps.Marker({
+					position: {lat: 38.718335, lng: -9.152987},
+					map: map
+					});
+					
+					var ConteudoCuidadosArco = 'Unidade de Saúde Familiar Arco <br><br><a href="https://www.google.pt/maps/dir//USF+do+Arco,+Tv.+do+Noronha+5A,+1250-096+Lisboa/@38.6620601,-9.1949583,11z/data=!4m15!1m6!3m5!1s0xd19337b89e9616d:0x6cc6e3d50ee09f4!2sUSF+do+Arco!8m2!3d38.7175368!4d-9.1529512!4m7!1m0!1m5!1m1!1s0xd19337b89e9616d:0x6cc6e3d50ee09f4!2m2!1d-9.1529512!2d38.7175368" target="_blank">Direções</a>';
+
+					  var infowindowConteudoCuidadosArco = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoCuidadosArco+ "</div>"
+					  });
+
+						CuidadosArco.addListener('click', function() {
+						infowindowConteudoCuidadosArco.open(map, CuidadosArco);
+					  });
+					  
+					   var CuidadosLapa = new google.maps.Marker({
+					position: {lat: 38.745935, lng: -9.101933},
+					map: map
+					});
+					
+					var ConteudoCuidadosLapa = 'Centro de Saúde Lapa <br><br><a href="https://www.google.pt/maps/dir//Centro+de+Sa%C3%BAde+da+Lapa,+R.+S%C3%A3o+Ciro+36,+1200-667+Lisboa/@38.7117437,-9.163221,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd193362005aa36f:0x76309974df5336e9!2m2!1d-9.1620086!2d38.7116642" target="_blank">Direções</a>';
+
+					  var infowindowConteudoCuidadosLapa = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoCuidadosLapa+ "</div>"
+					  });
+
+						CuidadosLapa.addListener('click', function() {
+						infowindowConteudoCuidadosLapa.open(map, CuidadosLapa);
+					  });
+					  
+					   var CuidadosMarvila = new google.maps.Marker({
+					position: {lat: 38.711731, lng: -9.161987},
+					map: map
+					});
+					
+					var ConteudoCuidadosMarvila = 'Centro de Saúde Marvila <br><br><a href="https://www.google.pt/maps/dir//Centro+de+Sa%C3%BAde+Marvila,+1950-087+Lisboa/@38.7461153,-9.1027375,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1933d872377d4f:0xc748bd0f4aa70a51!2m2!1d-9.1019114!2d38.7458936" target="_blank">Direções</a>';
+
+					  var infowindowConteudoCuidadosMarvila = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoCuidadosMarvila+ "</div>"
+					  });
+
+						CuidadosMarvila.addListener('click', function() {
+						infowindowConteudoCuidadosMarvila.open(map, CuidadosMarvila);
+					  });
+					
+					var CuidadosMonica = new google.maps.Marker({
+					position: {lat: 38.715094, lng: -9.130515},
+					map: map
+					});
+					
+					var ConteudoCuidadosMonica = 'Extensão de Saúde Monica <br><br><a href="https://www.google.pt/maps/dir//Extens%C3%A3o+de+Sa%C3%BAde+M%C3%B3nicas+(C.+S.+Gra%C3%A7a),+Travessa+das+M%C3%B3nicas+57D,+1100-005+Lisboa/@38.7148893,-9.1315233,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd193389c1637591:0xafa45eba04e9c2fa!2m2!1d-9.1305255!2d38.7150358" target="_blank">Direções</a>';
+
+					  var infowindowConteudoCuidadosMonica = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoCuidadosMonica+ "</div>"
+					  });
+
+						CuidadosMonica.addListener('click', function() {
+						infowindowConteudoCuidadosMonica.open(map, CuidadosMonica);
+					  });
+					
+					var CuidadosMonte = new google.maps.Marker({
+					position: {lat: 38.725422, lng: -9.120539},
+					map: map
+					});
+					
+					var ConteudoCuidadosMonte = 'Unidade de Saúde Familiar Monte Pedral <br><br><a href="https://www.google.pt/maps/dir//USF+Monte+Pedral,+R.+Adolfo+Coelho,+1900-424+Lisboa/@38.7253677,-9.1227275,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1933ed8f436d9d:0x78949f0c8467e660!2m2!1d-9.1205388!2d38.7253635" target="_blank">Direções</a>';
+
+					  var infowindowConteudoCuidadosMonte = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoCuidadosMonte+ "</div>"
+					  });
+
+						CuidadosMonte.addListener('click', function() {
+						infowindowConteudoCuidadosMonte.open(map, CuidadosMonte);
+					  });
+					  
+					  var CuidadosOlivais = new google.maps.Marker({
+					position: {lat: 38.773574, lng: -9.118141},
+					map: map
+					});
+					
+					var ConteudoCuidadosOlivais = 'Centro de Sáude Olivais <br><br><a href="https://www.google.pt/maps/dir//Centro+de+Saude+dos+Olivais,+Alameda+da+Encarna%C3%A7%C3%A3o+68,+Lisboa/@38.7682872,-9.1318741,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd19323ea97341df:0xd456abeb5d43e280!2m2!1d-9.1181454!2d38.7725359" target="_blank">Direções</a>';
+
+					  var infowindowConteudoCuidadosOlivais = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoCuidadosOlivais+ "</div>"
+					  });
+
+						CuidadosOlivais.addListener('click', function() {
+						infowindowConteudoCuidadosOlivais.open(map, CuidadosOlivais);
+					  });
+					  
+					  var CuidadosOriente = new google.maps.Marker({
+					position: {lat: 38.726576, lng: -9.118880},
+					map: map
+					});
+					
+					var ConteudoCuidadosOriente = 'Centro de Saúde Olivais <br><br><a href="https://www.google.pt/maps/dir//Usf+Oriente,+Av.+Afonso+III+Lote+16,+1900-041+Lisboa/@38.7272331,-9.1199211,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1933214ef584f5:0xf9eebdc0e4bf921!2m2!1d-9.1189019!2d38.7265007" target="_blank">Direções</a>';
+
+					  var infowindowConteudoCuidadosOriente = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoCuidadosOriente+ "</div>"
+					  });
+
+						CuidadosOriente.addListener('click', function() {
+						infowindowConteudoCuidadosOriente.open(map, CuidadosOriente);
+					  });
+					  
+					   var CuidadosPenha = new google.maps.Marker({
+					position: {lat: 38.724191, lng: -9.134586},
+					map: map
+					});
+					
+					var ConteudoCuidadosPenha = 'Centro de Saúde da Penha de França <br><br><a href="https://www.google.pt/maps/dir//Centro+de+Sa%C3%BAde+da+Penha+de+Fran%C3%A7a,+R.+Lu%C3%ADs+Pinto+Moitinho+5,+Lisboa/@38.7240278,-9.1358194,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd19339aaabc76e9:0xc5ce37aff08a2304!2m2!1d-9.1345963!2d38.7241157" target="_blank">Direções</a>';
+
+					  var infowindowConteudoCuidadosPenha = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoCuidadosPenha+ "</div>"
+					  });
+
+						CuidadosPenha.addListener('click', function() {
+						infowindowConteudoCuidadosPenha.open(map, CuidadosPenha);
+					  });
+					
+					var CuidadosJoao = new google.maps.Marker({
+					position: {lat: 38.759600, lng: -9.122656},
+					map: map
+					});
+					
+					var ConteudoCuidadosJoao = 'Unidade de Saúde Familiar S. João Evangelista dos Lóios <br><br><a href="https://www.google.pt/maps/dir//Unidade+de+Sa%C3%BAde+Familiar+S.+Jo%C3%A3o+Evangelista+dos+L%C3%B3ios,+R.+Pedro+Jos%C3%A9+Pezerat+11,+1950-239+Lisboa/@38.7597796,-9.1235461,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd19323590c37863:0xe8ac703e5e923843!2m2!1d-9.1226663!2d38.7595747" target="_blank">Direções</a>';
+
+					  var infowindowConteudoCuidadosJoao = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoCuidadosJoao+ "</div>"
+					  });
+
+						CuidadosJoao.addListener('click', function() {
+						infowindowConteudoCuidadosJoao.open(map, CuidadosJoao);
+					  });
+					  
+					  var CuidadosNicolau = new google.maps.Marker({
+					position: {lat: 38.710678, lng: -9.136185},
+					map: map
+					});
+					
+					var ConteudoCuidadosNicolau = 'Unidade de Cuidados de Saúde Personalizados de São Nicolau <br><br><a href="https://www.google.pt/maps/dir//Unidade+de+Cuidados+de+Sa%C3%BAde+Personalizados+de+S%C3%A3o+Nicolau,+de,+R.+S%C3%A3o+Nicolau+13,+1100-547+Lisboa/@38.7108203,-9.1386312,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd193479b6e70c23:0xf9f99a863000167b!2m2!1d-9.1361829!2d38.7105433" target="_blank">Direções</a>';
+
+					  var infowindowConteudoCuidadosNicolau = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoCuidadosNicolau+ "</div>"
+					  });
+
+						CuidadosNicolau.addListener('click', function() {
+						infowindowConteudoCuidadosNicolau.open(map, CuidadosNicolau);
+					  });
+					  
+					  var CuidadosColina = new google.maps.Marker({
+					position: {lat: 38.723605, lng: -9.131891},
+					map: map
+					});
+					
+					var ConteudoCuidadosColina = 'Unidade de Saúde Familiar Sétima Colina <br><br><a href="https://www.google.pt/maps/dir//USF+S%C3%A9tima+Colina,+R.+Angelina+Vidal+73,+1170-211+Lisboa/@38.7240197,-9.1328457,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd19338fcd104d37:0x5a666d0dbe42cdca!2m2!1d-9.1319016!2d38.7235635" target="_blank">Direções</a>';
+
+					  var infowindowConteudoCuidadosColina = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoCuidadosColina+ "</div>"
+					  });
+
+						CuidadosColina.addListener('click', function() {
+						infowindowConteudoCuidadosColina.open(map, CuidadosColina);
+					  });
+					  
+					  var CuidadosIsabel = new google.maps.Marker({
+					position: {lat: 38.717669, lng: -9.152918},
+					map: map
+					});
+					
+					var ConteudoCuidadosIsabel = 'Centro de Saúde de São Mamede-Santa Isabel <br><br><a href="https://www.google.pt/maps/dir//USF+S%C3%A9tima+Colina,+R.+Angelina+Vidal+73,+1170-211+Lisboa/@38.7240197,-9.1328457,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd19338fcd104d37:0x5a666d0dbe42cdca!2m2!1d-9.1319016!2d38.7235635" target="_blank">Direções</a>';
+
+					  var infowindowConteudoCuidadosIsabel = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoCuidadosIsabel+ "</div>"
+					  });
+
+						CuidadosIsabel.addListener('click', function() {
+						infowindowConteudoCuidadosIsabel.open(map, CuidadosIsabel);
+					  });
+					  
+					  var CuidadosVIH = new google.maps.Marker({
+					position: {lat: 38.711830, lng: -9.211118},
+					map: map
+					});
+					
+					var ConteudoCuidadosVIH = 'Centro de Aconselhamento e Detecção VIH (Restelo) <br><br><a href="https://www.google.pt/maps/dir//Centro+de+Aconselhamento+e+Detec%C3%A7%C3%A3o+VIH+(Restelo,+Av.+Dr.+M%C3%A1rio+Moutinho,+Lisboa/@38.7117843,-9.2133062,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1ecca1e90cf82d:0xe41ca648aee7407c!2m2!1d-9.2111175!2d38.7117801" target="_blank">Direções</a>';
+
+					  var infowindowConteudoCuidadosVIH = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoCuidadosVIH+ "</div>"
+					  });
+
+						CuidadosVIH.addListener('click', function() {
+						infowindowConteudoCuidadosVIH.open(map, CuidadosVIH);
+					  });
+					  
+					   var CuidadosAlcantara = new google.maps.Marker({
+					position: {lat: 38.706027, lng: -9.185211},
+					map: map
+					});
+					
+					var ConteudoCuidadosAlcantara = 'Unidade de Cuidados de Saúde Personalizados de Alcântara (CS Alcantara) <br><br><a href="https://www.google.pt/maps/dir//Unidade+de+Cuidados+de+Sa%C3%BAde+Personalizados+de+Alc%C3%A2ntara+(CS+Alcantara),+Cal%C3%A7ada+da+Tapada+126,+1349-049+Alc%C3%A2ntara,+Lisboa/@38.7059889,-9.187389,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1934abc29b3625:0x2bc250702e10d13a!2m2!1d-9.1851896!2d38.705968" target="_blank">Direções</a>';
+
+					  var infowindowConteudoCuidadosAlcantara = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoCuidadosAlcantara +  "</div>"
+					  });
+
+						CuidadosAlcantara.addListener('click', function() {
+						infowindowConteudoCuidadosAlcantara.open(map, CuidadosAlcantara);
+					  });
+					  
+					  var CuidadosDescobertas = new google.maps.Marker({
+					position: {lat: 38.695264, lng: -9.220587},
+					map: map
+					});
+					
+					var ConteudoCuidadosDescobertas = 'Unidade de Saúde Familiar Descobertas <br><br><a href="https://www.google.pt/maps/dir//USF+Descobertas,+R.+Fern%C3%A3o+Mendes+Pinto+19,+1400-279+Lisboa/@38.6952934,-9.2217349,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1ecb692ed0b69d:0x5344d3e4f65557dc!2m2!1d-9.2205655!2d38.6952139" target="_blank">Direções</a>';
+
+					  var infowindowConteudoCuidadosDescobertas = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoCuidadosDescobertas +  "</div>"
+					  });
+
+						CuidadosDescobertas.addListener('click', function() {
+						infowindowConteudoCuidadosDescobertas.open(map, CuidadosDescobertas);
+					  });
+					  
+					  var CuidadosAjuda = new google.maps.Marker({
+					position: {lat: 38.705577, lng: -9.194488},
+					map: map
+					});
+					
+					var ConteudoCuidadosAjuda = 'Centro de Saúde Ajuda <br><br><a href="https://www.google.pt/maps/dir//Centro+de+Sa%C3%BAde+Ajuda,+Tv.+Florindas+5,+1300-250+Lisboa/@38.7055312,-9.1966764,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1ecb543bc0638f:0xa4707247f0436b1b!2m2!1d-9.1944877!2d38.705527" target="_blank">Direções</a>';
+
+					  var infowindowConteudoCuidadosAjuda = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoCuidadosAjuda +  "</div>"
+					  });
+
+						CuidadosAjuda.addListener('click', function() {
+						infowindowConteudoCuidadosAjuda.open(map, CuidadosAjuda);
+					  });
+					  
+					  var CuidadosCondestavel = new google.maps.Marker({
+					position: {lat: 38.714130, lng: -9.164532},
+					map: map
+					});
+					
+					var ConteudoCuidadosCondestavel = 'Unidade de Saúde Familiar Santo Condestável <br><br><a href="https://www.google.pt/maps/dir//Unidade+de+Sa%C3%BAde+Familiar+Santo+Condest%C3%A1vel,+R.+Patroc%C3%ADnio+60,+1350-230+Lisboa/@38.7156196,-9.1665059,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd193361071b588b:0x3888f9416591d0d5!2m2!1d-9.164559!2d38.713987" target="_blank">Direções</a>';
+
+					  var infowindowConteudoCuidadosCondestavel = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoCuidadosCondestavel +  "</div>"
+					  });
+
+						CuidadosCondestavel.addListener('click', function() {
+						infowindowConteudoCuidadosCondestavel.open(map, CuidadosCondestavel);
+					  });
+					  
+					  var ConsuladoBrasil = new google.maps.Marker({
+					position: {lat: 38.709892, lng: -9.142555},
+					map: map
+					});
+					
+					var ConteudoConsuladoBrasil = 'Consulado do Brasil <br><br><a href="https://www.google.com/maps/dir//Consulado-Geral+do+Brasil+em+Lisboa,+R.+Ant%C3%B3nio+Maria+Cardoso+39,+1200-026+Lisboa/@38.7098629,-9.1447328,17z/data=!4m15!1m6!3m5!1s0xd19347ef9fd343d:0x4cd99ed83055c5e2!2sConsulado-Geral+do+Brasil+em+Lisboa!8m2!3d38.7098587!4d-9.1425441!4m7!1m0!1m5!1m1!1s0xd19347ef9fd343d:0x4cd99ed83055c5e2!2m2!1d-9.1425441!2d38.7098587" target="_blank">Direções</a>';
+
+					  var infowindowConteudoConsuladoBrasil = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoConsuladoBrasil +  "</div>"
+					  });
+
+						ConsuladoBrasil.addListener('click', function() {
+						infowindowConteudoConsuladoBrasil.open(map, ConsuladoBrasil);
+					  });
+					  
+					   var EmbaixadaArgentina = new google.maps.Marker({
+					position: {lat: 38.736805, lng: -9.141681},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaArgentina = 'Embaixada da Argentina <br><br><a href="https://www.google.com/maps/dir//Embaixada+da+Argentina,+Av.+Jo%C3%A3o+Cris%C3%B3stomo+8,+1000-042+Lisboa/@38.7371268,-9.1424209,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1933a10a85e315:0xd367c76d4a943944!2m2!1d-9.1417021!2d38.7367628" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaArgentina = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoEmbaixadaArgentina +  "</div>"
+					  });
+
+						EmbaixadaArgentina.addListener('click', function() {
+						infowindowConteudoEmbaixadaArgentina.open(map, EmbaixadaArgentina);
+					  });
+					  
+					  var ConsuladoAngola = new google.maps.Marker({
+					position: {lat: 38.705326, lng: -9.176563},
+					map: map
+					});
+					
+					var ConteudoConsuladoAngola = 'Consulado de Angola <br><br><a href="https://www.google.com/maps/dir//Consulado+Geral+de+Angola,+Rua+Fradesso+da+Silveira+Alc%C3%A2ntara+Rio+Bloco+E+1300-260+Lisboa,+1300-023+Lisboa/@38.719323,-9.1872057,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1934a43a9ea91d:0x1f7ca7cb811082ed!2m2!1d-9.1764338!2d38.7047575" target="_blank">Direções</a>';
+
+					  var infowindowConteudoConsuladoAngola = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoConsuladoAngola+  "</div>"
+					  });
+
+						ConsuladoAngola.addListener('click', function() {
+						infowindowConteudoConsuladoAngola.open(map, ConsuladoAngola);
+					  });
+					  
+					  var EmbaixadaAngola = new google.maps.Marker({
+					position: {lat: 38.744755, lng: -9.147037},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaAngola = 'Embaixada da Angola <br><br><a href="https://www.google.com/maps/dir//Embaixada+de+Angola,+Av.+Rep%C3%BAblica+68,+1069-213+Lisboa/@38.7467302,-9.1442045,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd193307c32a5041:0x295995afe91ee8dc!2m2!1d-9.146984!2d38.7444647" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaAngola = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoEmbaixadaAngola+  "</div>"
+					  });
+
+						EmbaixadaAngola.addListener('click', function() {
+						infowindowConteudoEmbaixadaAngola.open(map, EmbaixadaAngola);
+					  });
+					  
+					  var EmbaixadaVenezuela = new google.maps.Marker({
+					position: {lat: 38.727871, lng: -9.145291},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaVenezuela = 'Embaixada da Venezuela <br><br><a href="https://www.google.com/maps/dir//Embaixada+da+Venezuela,+Av.+Duque+de+Loul%C3%A9+47,+4%C2%BA,+1050-086+Lisboa/@38.7280009,-9.1456559,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd19339dfa1b04a5:0xa7f783a926aa9c6a!2m2!1d-9.145285!2d38.727829" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaVenezuela = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoEmbaixadaVenezuela+  "</div>"
+					  });
+
+						EmbaixadaVenezuela.addListener('click', function() {
+						infowindowConteudoEmbaixadaVenezuela.open(map, EmbaixadaVenezuela);
+					  });
+					  
+					  var EmbaixadaEslo = new google.maps.Marker({
+					position: {lat: 38.721539, lng: -9.146054},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaEslo = 'Embaixada da Eslováquia <br><br><a href="https://www.google.com/maps/dir//Embaixada+da+Eslov%C3%A1quia,+Av.+da+Liberdade+200,+1250-096+Lisboa/@38.7214346,-9.1463976,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd193378713de185:0xdd699cbfc7bc3365!2m2!1d-9.1460435!2d38.721489" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaEslo = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoEmbaixadaEslo+  "</div>"
+					  });
+
+						EmbaixadaEslo.addListener('click', function() {
+						infowindowConteudoEmbaixadaEslo.open(map, EmbaixadaEslo);
+					  });
+					  
+					  var EmbaixadaAustralia = new google.maps.Marker({
+					position: {lat: 38.721451, lng: -9.146014},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaAustralia = 'Embaixada da Austrália <br><br><a href="https://www.google.com/maps/dir//Australian+Embassy,+Lisbon,+Av.+da+Liberdade+200,+1250-147+Lisboa/@38.7216641,-9.1468726,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1ed29633e43ec5:0x7402fc331c9a9b0f!2m2!1d-9.146025!2d38.7214004" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaAustralia = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoEmbaixadaAustralia +  "</div>"
+					  });
+
+						EmbaixadaAustralia.addListener('click', function() {
+						infowindowConteudoEmbaixadaAustralia.open(map, EmbaixadaAustralia);
+					  });
+					  
+					  var EmbaixadaAustria = new google.maps.Marker({
+					position: {lat: 38.708378, lng: -9.167428},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaAustria = 'Embaixada da Áustria <br><br><a href="https://www.google.com/maps/dir//Embaixada+da+%C3%81ustria+em+Lisboa,+Av.+Infante+Santo+43,+1399-046+Lisboa/@38.7086753,-9.1682649,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd19349f7ed3cb3d:0xa1f6e69fd62ea26f!2m2!1d-9.167428!2d38.708353" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaAustria = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoEmbaixadaAustria +  "</div>"
+					  });
+
+						EmbaixadaAustria.addListener('click', function() {
+						infowindowConteudoEmbaixadaAustria.open(map, EmbaixadaAustria);
+					  });
+					  
+					  var EmbaixadaBelgica = new google.maps.Marker({
+					position: {lat: 38.724740, lng: -9.153618},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaBelgica = 'Embaixada da Bélgica <br><br><a href="https://www.google.com/maps/dir//Embaixada+de+B%C3%A9lgica,+R.+Castilho+75,+1250-068+Lisboa/@38.7248681,-9.1539773,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd193370f9765beb:0x54ec0814efdd6c92!2m2!1d-9.1536232!2d38.7247195" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaBelgica = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoEmbaixadaBelgica +  "</div>"
+					  });
+
+						EmbaixadaBelgica.addListener('click', function() {
+						infowindowConteudoEmbaixadaBelgica.open(map, EmbaixadaBelgica);
+					  });
+					  
+					  var EmbaixadaBulgaria = new google.maps.Marker({
+					position: {lat: 38.707908, lng: -9.163613},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaBulgaria = 'Embaixada da Bulgaria <br><br><a href="https://www.google.com/maps/dir//Embaixada+da+Bulgaria,+R.+Sacramento+%C3%A0+Lapa+31,+1200-828+Lisboa/@38.7081069,-9.1643367,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd19349eeb9178f9:0x6c27374307fa5e77!2m2!1d-9.1636179!2d38.7078913" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaBulgaria = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoEmbaixadaBulgaria +  "</div>"
+					  });
+
+						EmbaixadaBulgaria.addListener('click', function() {
+						infowindowConteudoEmbaixadaBulgaria.open(map, EmbaixadaBulgaria);
+					  });
+					
+					var EmbaixadaCanada = new google.maps.Marker({
+					position: {lat: 38.721344, lng: -9.145860},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaCanada = 'Embaixada do Canadá <br><br><a href="https://www.google.com/maps/dir//Embaixada+do+Canada,+Av.+da+Liberdade+196,+1250-096+Lisboa/@38.7210151,-9.1461178,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1ed2a4b8450b3d:0x909192cdb7b19309!2m2!1d-9.1458603!2d38.7213102" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaCanada = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ConteudoEmbaixadaCanada +  "</div>"
+					  });
+
+						EmbaixadaCanada.addListener('click', function() {
+						infowindowConteudoEmbaixadaCanada.open(map, EmbaixadaCanada);
+					  });
+					  
+					  var EmbaixadaCaboVerde = new google.maps.Marker({
+					position: {lat: 38.700488, lng: -9.216241},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaCaboVerde = 'Embaixada do Cabo Verde <br><br><a href="https://www.google.com/maps/dir//Embaixada+de+Cabo+Verde+em+Portugal,+Av.+do+Restelo+33,+Lisboa/@38.7003642,-9.2173143,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1ecb669357755d:0x201756d7e7e9ed73!2m2!1d-9.2162521!2d38.7004584" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaCaboVerde = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaCaboVerde +  "</div>"
+					  });
+
+						EmbaixadaCaboVerde.addListener('click', function() {
+						infowindowConteudoEmbaixadaCaboVerde.open(map, EmbaixadaCaboVerde);
+					  });
+					
+					var EmbaixadaChile = new google.maps.Marker({
+					position: {lat: 38.737251, lng: -9.144588},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaChile = 'Embaixada do Chile <br><br><a href="https://www.google.com/maps/dir//Embaixada+do+Chile,+1%C2%BA+Andar,+Av.+Miguel+Bombarda+5,+1000-207+Lisboa/@38.7371886,-9.1467878,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1933a0973b7c07:0x2075dd60f513c38f!2m2!1d-9.1445991!2d38.7371844" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaChile = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaChile +  "</div>"
+					  });
+
+						EmbaixadaChile.addListener('click', function() {
+						infowindowConteudoEmbaixadaChile.open(map, EmbaixadaChile);
+					  });
+					  
+					  
+					var EmbaixadaColombia = new google.maps.Marker({
+					position: {lat: 38.728619, lng: -9.147362},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaColombia = 'Embaixada da Colômbia <br><br><a href="https://www.google.com/maps/dir//Pal%C3%A1cio+Sotto+Mayor,+Av.+Fontes+Pereira+de+Melo+16,+1050-010+Lisboa/@38.7286849,-9.1475659,19z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd193375d9520dbd:0x8bf8e95ff74cd05c!2m2!1d-9.147362!2d38.7285909" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaColombia = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaColombia +  "</div>"
+					  });
+
+						EmbaixadaColombia.addListener('click', function() {
+						infowindowConteudoEmbaixadaColombia.open(map, EmbaixadaColombia);
+					  });
+					  
+					  var EmbaixadaFinlandia = new google.maps.Marker({
+					position: {lat: 38.712544, lng: -9.165314},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaFinlandia = 'Embaixada da Finlândia <br><br><a href="https://www.google.com/maps/dir//Embaixada+da+Finl%C3%A2ndia,+Rua+do+Possolo+76-1,+1350-251+Lisboa/@38.7124667,-9.1661825,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1933604a5e3f51:0x886e1d4326986778!2m2!1d-9.1653135!2d38.7125065" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaFinlandia= new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaFinlandia +  "</div>"
+					  });
+
+						EmbaixadaFinlandia.addListener('click', function() {
+						infowindowConteudoEmbaixadaFinlandia.open(map, EmbaixadaFinlandia);
+					  });
+					  
+					  var EmbaixadaFranca = new google.maps.Marker({
+					position: {lat: 38.707371, lng: -9.156584},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaFranca = 'Embaixada da França <br><br><a href="https://www.google.com/maps/dir//Embaixada+de+Fran%C3%A7a,+1249-079,+R.+Santos-O-Velho+5,+Lisboa/@38.7072745,-9.1587619,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd193483531c0c25:0xb6ec5b85f07e43e1!2m2!1d-9.1565732!2d38.7072703" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaFranca= new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaFranca +  "</div>"
+					  });
+
+						EmbaixadaFranca.addListener('click', function() {
+						infowindowConteudoEmbaixadaFranca.open(map, EmbaixadaFranca);
+					  });
+					  
+					  var EmbaixadaAlemanha = new google.maps.Marker({
+					position: {lat: 38.721404, lng: -9.140837},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaAlemanha = 'Embaixada da Alemanha <br><br><a href="https://www.google.com/maps/dir//Embaixada+da+Alemanha,+Campo+M%C3%A1rtires+da+P%C3%A1tria+38,+1150-224+Lisboa/@38.7213159,-9.1430045,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd193383784ba791:0xfa66fc01561b03f0!2m2!1d-9.1408158!2d38.7213117" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaAlemanha = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaAlemanha +  "</div>"
+					  });
+
+						EmbaixadaAlemanha.addListener('click', function() {
+						infowindowConteudoEmbaixadaAlemanha.open(map, EmbaixadaAlemanha);
+					  });
+					  
+					  var EmbaixadaGrecia = new google.maps.Marker({
+					position: {lat: 38.702885, lng: -9.218998},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaGrecia = 'Embaixada da Grécia <br><br><a href="https://www.google.com/maps/dir//Embaixada+da+Gr%C3%A9cia,+R.+Alto+do+Duque+13,+Lisboa/@38.702805,-9.2211759,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1ecb63ec9eff73:0xf45ed482067f4c9d!2m2!1d-9.2189872!2d38.7028008" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaGrecia = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaGrecia +  "</div>"
+					  });
+
+						EmbaixadaGrecia.addListener('click', function() {
+						infowindowConteudoEmbaixadaGrecia.open(map, EmbaixadaGrecia);
+					  });
+					
+					var EmbaixadaGuine = new google.maps.Marker({
+					position: {lat: 38.700543, lng: -9.212556},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaGuine = 'Embaixada da Guiné-Bissau <br><br><a href="https://www.google.com/maps/dir//Embaixada+da+Guin%C3%A9-Bissau,+1400,+R.+Alcolena+17,+Lisboa/@38.7005056,-9.2147557,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1ecb6764dede31:0xb5ba4a2f9bd5d072!2m2!1d-9.212567!2d38.7005014" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaGuine = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaGuine +  "</div>"
+					  });
+
+						EmbaixadaGuine.addListener('click', function() {
+						infowindowConteudoEmbaixadaGuine.open(map, EmbaixadaGuine);
+					  });
+					  
+					  var EmbaixadaHungria = new google.maps.Marker({
+					position: {lat: 38.702914, lng: -9.186630},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaHungria = 'Embaixada da Hungria <br><br><a href="https://www.google.com/maps/dir//Embaixada+da+Hungria,+Cal%C3%A7ada+Santo+Amaro+85,+1300-516+Lisboa/@38.7030798,-9.1866464,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1934ac5c38125d:0x9abc773a5f62d0ad!2m2!1d-9.1866357!2d38.7028852" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaHungria = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaHungria +  "</div>"
+					  });
+
+						EmbaixadaHungria.addListener('click', function() {
+						infowindowConteudoEmbaixadaHungria.open(map, EmbaixadaHungria);
+					  });
+					  
+					  var EmbaixadaIndia = new google.maps.Marker({
+					position: {lat: 38.703662, lng: -9.209627},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaIndia = 'Embaixada da Índia <br><br><a href="https://www.google.com/maps/dir//Embassy+of+India,+R.+P%C3%AAro+da+Covilh%C3%A3+16A,+Lisboa/@38.7040091,-9.2109573,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1ecb5e66aba3f3:0xe9e3f245d72dacba!2m2!1d-9.2096484!2d38.703603" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaIndia = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaIndia +  "</div>"
+					  });
+
+						EmbaixadaIndia.addListener('click', function() {
+						infowindowConteudoEmbaixadaIndia.open(map, EmbaixadaIndia);
+					  });
+					
+					var EmbaixadaIraque = new google.maps.Marker({
+					position: {lat: 38.705880, lng: -9.163198},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaIraque = 'Embaixada do Iraque <br><br><a href="https://www.google.com/maps/dir//Embaixada+Do+Iraque+Em+Portugal,+R.+Arriaga+9,+1200-741+Lisboa/@38.7060687,-9.1646573,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1934994f3cee0b:0xfa1516d71d94294c!2m2!1d-9.1631874!2d38.7057464" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaIraque = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaIraque +  "</div>"
+					  });
+
+						EmbaixadaIraque.addListener('click', function() {
+						infowindowConteudoEmbaixadaIraque.open(map, EmbaixadaIraque);
+					  });
+					  
+					  var EmbaixadaIrlanda = new google.maps.Marker({
+					position: {lat: 38.721407, lng: -9.145847},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaIrlanda = 'Embaixada da Irlanda <br><br><a href="https://www.google.com/maps/dir//Embaixada+Da+Irlanda,+Av.+da+Liberdade+200,+1250-147+Lisboa/@38.7213026,-9.1480571,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd19337871a3103d:0xc57b0f867d90fab6!2m2!1d-9.1458684!2d38.7212984" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaIrlanda = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaIrlanda +  "</div>"
+					  });
+
+						EmbaixadaIrlanda.addListener('click', function() {
+						infowindowConteudoEmbaixadaIrlanda.open(map, EmbaixadaIrlanda);
+					  });
+					  
+					  var EmbaixadaIsrael = new google.maps.Marker({
+					position: {lat: 38.734594, lng: -9.148432},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaIsrael = 'Embaixada de Israel <br><br><a href="https://www.google.com/maps/dir//Israel+Embassy,+R.+Ant%C3%B3nio+Enes+16,+1050-023+Lisboa/@38.7345562,-9.1506205,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd19330b206298e5:0x6181c22b09d0bbf9!2m2!1d-9.1484318!2d38.734552" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaIsrael = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaIsrael +  "</div>"
+					  });
+
+						EmbaixadaIsrael.addListener('click', function() {
+						infowindowConteudoEmbaixadaIsrael.open(map, EmbaixadaIsrael);
+					  });
+					  
+					  var EmbaixadaItalia = new google.maps.Marker({
+					position: {lat: 38.723985, lng: -9.137008},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaItalia = 'Embaixada de Itália <br><br><a href="https://www.google.com/maps/dir//Embaixada+de+It%C3%A1lia,+Largo+Conde+Pombeiro+6,+1150-043+Lisboa/@38.724031,-9.1380917,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1933852b767e25:0x3b8ef2829a3a3fc7!2m2!1d-9.1369866!2d38.7238929" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaItalia = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaItalia +  "</div>"
+					  });
+
+						EmbaixadaItalia.addListener('click', function() {
+						infowindowConteudoEmbaixadaItalia.open(map, EmbaixadaItalia);
+					  });
+					  
+					  var EmbaixadaJapao = new google.maps.Marker({
+					position: {lat: 38.723570, lng: -9.149203},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaJapao = 'Embaixada do Japão <br><br><a href="https://www.google.com/maps/dir//Embaixada+do+Jap%C3%A3o,+Av.+da+Liberdade+245,+1250-096+Lisboa/@38.7235237,-9.1513916,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd19337765127381:0x61bd2b885ea44e15!2m2!1d-9.1492029!2d38.7235195" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaJapao = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaJapao +  "</div>"
+					  });
+
+						EmbaixadaJapao.addListener('click', function() {
+						infowindowConteudoEmbaixadaJapao.open(map, EmbaixadaJapao);
+					  });
+					  
+					  var EmbaixadaMexico = new google.maps.Marker({
+					position: {lat: 38.737656, lng: -9.202020},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaMexico = 'Embaixada do México <br><br><a href="https://www.google.com/maps/dir//Embaixada+do+M%C3%A9xico,+Estr.+de+Monsanto+78,+Lisboa/@38.7375762,-9.2041977,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1eccc571f28dc5:0x351f5d57fcf69ffa!2m2!1d-9.202009!2d38.737572" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaMexico = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaMexico +  "</div>"
+					  });
+
+						EmbaixadaMexico.addListener('click', function() {
+						infowindowConteudoEmbaixadaMexico.open(map, EmbaixadaMexico);
+					  });
+					  
+					  var EmbaixadaNoruega = new google.maps.Marker({
+					position: {lat: 38.702202, lng: -9.217297},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaNoruega = 'Embaixada da Noruega <br><br><a href="https://www.google.com/maps/dir//EMBAIXADA+DA+NORUEGA,+Av.+Dom+Vasco+da+Gama+1,+Lisboa/@38.7021223,-9.2194749,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1ecb61650d6897:0x15d57eb1aea324d8!2m2!1d-9.2172862!2d38.7021181" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaNoruega = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaNoruega +  "</div>"
+					  });
+
+						EmbaixadaNoruega.addListener('click', function() {
+						infowindowConteudoEmbaixadaNoruega.open(map, EmbaixadaNoruega);
+					  });
+					  
+					  var EmbaixadaPeru = new google.maps.Marker({
+					position: {lat: 38.723868, lng: -9.152154},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaPeru = 'Embaixada do Peru <br><br><a href="https://www.google.com/maps/dir//Embassy+of+Peru,+4%C2%BA+D,+R.+Castilho+50,+1250-071+Lisboa/@38.7237462,-9.1543427,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd193370bc23d47d:0x5802bde366ce4372!2m2!1d-9.152154!2d38.723742" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaPeru = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaPeru +  "</div>"
+					  });
+
+						EmbaixadaPeru.addListener('click', function() {
+						infowindowConteudoEmbaixadaPeru.open(map, EmbaixadaPeru);
+					  });
+					  
+					  var EmbaixadaPolonia = new google.maps.Marker({
+					position: {lat: 38.703855, lng: -9.216557},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaPolonia = 'Embaixada da Polónia <br><br><a href="https://www.google.com/maps/dir//Embaixada+da+Rep%C3%BAblica+da+Pol%C3%B3nia+em+Lisboa,+Av.+das+Descobertas+2,+1400-092+Lisboa/@38.70375,-9.2173507,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1ecb616e9fba65:0x4adea1162108a046!2m2!1d-9.2165675!2d38.7037793" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaPolonia = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaPolonia +  "</div>"
+					  });
+
+						EmbaixadaPolonia.addListener('click', function() {
+						infowindowConteudoEmbaixadaPolonia.open(map, EmbaixadaPolonia);
+					  });
+					  
+					  var EmbaixadaRomenia = new google.maps.Marker({
+					position: {lat: 38.709470, lng: -9.163486},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaRomenia = 'Embaixada da Roménia <br><br><a href="https://www.google.com/maps/dir//Embaixada+da+Rom%C3%A9nia,+R.+S%C3%A3o+Caetano+5,+1200-623+Lisboa/@38.709474,-9.1644621,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd19349e67a67da1:0x58b8fc4c5d1ba9c8!2m2!1d-9.1634858!2d38.709361" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaRomenia = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaRomenia +  "</div>"
+					  });
+
+						EmbaixadaRomenia.addListener('click', function() {
+						infowindowConteudoEmbaixadaRomenia.open(map, EmbaixadaRomenia);
+					  });
+					
+					var EmbaixadaServia = new google.maps.Marker({
+					position: {lat: 38.700772, lng: -9.211488},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaServia = 'Embaixada da Sérvia <br><br><a href="https://www.google.com/maps/dir//Embaixada+de+Rep%C3%BAblica+de+S%C3%A9rvia,+R.+Alcolena+11,+1400-314+Lisboa/@38.7006925,-9.2136364,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1ecb5d8e353647:0x6f1b525d8c549daa!2m2!1d-9.2114477!2d38.7006883" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaServia = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaServia +  "</div>"
+					  });
+
+						EmbaixadaServia.addListener('click', function() {
+						infowindowConteudoEmbaixadaServia.open(map, EmbaixadaServia);
+					  });
+					  
+					  var EmbaixadaAfrica = new google.maps.Marker({
+					position: {lat: 38.732809, lng: -9.150276},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaAfrica = 'Embaixada da África do Sul <br><br><a href="https://www.google.com/maps/dir//Embaixada+da+%C3%81frica+do+Sul,+Av.+Lu%C3%ADs+B%C3%ADvar+10,+1050-010+Lisboa/@38.7328022,-9.1510862,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd193374b107f2bf:0xa5310eea9f7b96f8!2m2!1d-9.1502923!2d38.7327374" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaAfrica = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaAfrica +  "</div>"
+					  });
+
+						EmbaixadaAfrica.addListener('click', function() {
+						infowindowConteudoEmbaixadaAfrica.open(map, EmbaixadaAfrica);
+					  });
+					  
+					  var EmbaixadaEspanha = new google.maps.Marker({
+					position: {lat: 38.719516, lng: -9.145678},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaEspanha = 'Embaixada da Espanha <br><br><a href="https://www.google.com/maps/dir//Embaixada+da+Espanha,+Pra%C3%A7a+de+Espanha+1,+1269-052+Lisboa/@38.7194201,-9.1478556,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1933789fe8e575:0x456cc4ad589a8ffd!2m2!1d-9.1456669!2d38.7194159" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaEspanha = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaEspanha +  "</div>"
+					  });
+
+						EmbaixadaEspanha.addListener('click', function() {
+						infowindowConteudoEmbaixadaEspanha.open(map, EmbaixadaEspanha);
+					  });
+					  
+					  var EmbaixadaSuecia = new google.maps.Marker({
+					position: {lat: 38.711987, lng: -9.155150},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaSuecia = 'Embaixada da Suécia <br><br><a href="https://www.google.com/maps/dir//Embaixada+Da+Suecia,+Rua+Miguel+Lupi+12,+1200-109+Lisboa/@38.7118494,-9.1573389,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1934829edb0a5f:0x22d72d5643f52ada!2m2!1d-9.1551502!2d38.7118452" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaSuecia = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaSuecia +  "</div>"
+					  });
+
+						EmbaixadaSuecia.addListener('click', function() {
+						infowindowConteudoEmbaixadaSuecia.open(map, EmbaixadaSuecia);
+					  });
+					  
+					  var EmbaixadaSuica = new google.maps.Marker({
+					position: {lat: 38.713912, lng: -9.163638},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaSuica = 'Embaixada da Suiça <br><br><a href="https://www.google.com/maps/dir//Embaixada+Su%C3%AD%C3%A7a,+Travessa+do+Jardim+15,+1350-229+Lisboa/@38.7138406,-9.1658376,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd193361a1cffdc9:0x67d70f4b61f44a79!2m2!1d-9.1636489!2d38.7138364" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaSuica = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaSuica +  "</div>"
+					  });
+
+						EmbaixadaSuica.addListener('click', function() {
+						infowindowConteudoEmbaixadaSuica.open(map, EmbaixadaSuica);
+					  });
+					  
+					  var EmbaixadaEgito = new google.maps.Marker({
+					position: {lat: 38.702454, lng: -9.218555},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaEgito = 'Embaixada da República Árabe do Egito <br><br><a href="https://www.google.com/maps/dir//Embaixada+da+Rep%C3%BAblica+%C3%81rabe+do+Egito,+Av.+Dom+Vasco+da+Gama+8,+1400-128+Lisboa/@38.7023491,-9.2206468,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1ecb63fba908d5:0x1cfe485a47cdc21d!2m2!1d-9.2185761!2d38.7023114" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaEgito = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaEgito +  "</div>"
+					  });
+
+						EmbaixadaEgito.addListener('click', function() {
+						infowindowConteudoEmbaixadaEgito.open(map, EmbaixadaEgito);
+					  });
+					  
+					  var EmbaixadaCheca = new google.maps.Marker({
+					position: {lat: 38.704036, lng: -9.212917},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaCheca = 'Embaixada da República Checa <br><br><a href="https://www.google.com/maps/dir//Embaixada+da+Rep%C3%BAblica+Checa,+R.+P%C3%AAro+de+Alenquer+14,+1400-069+Lisboa/@38.7039729,-9.2144405,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1ecb60a6a67349:0xf4a7abe5f5a969fe!2m2!1d-9.2128741!2d38.7038599" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaCheca = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaCheca +  "</div>"
+					  });
+
+						EmbaixadaCheca.addListener('click', function() {
+						infowindowConteudoEmbaixadaCheca.open(map, EmbaixadaCheca);
+					  });
+					  
+					  var EmbaixadaArgelia = new google.maps.Marker({
+					position: {lat: 38.700245, lng: -9.216049},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaArgelia = 'Embaixada da República Democrática e Popular da Argélia <br><br><a href="https://www.google.com/maps/dir//Embaixada+da+Rep%C3%BAblica+Democr%C3%A1tica+e+Popular+da+Arg%C3%A9lia,+R.+Duarte+Pacheco+Pereira+58,+Lisboa/@38.700165,-9.218248,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1ecb66f2376f9f:0x8686ccfcd55cadb2!2m2!1d-9.2160593!2d38.7001608" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaArgelia = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaArgelia +  "</div>"
+					  });
+
+						EmbaixadaArgelia.addListener('click', function() {
+						infowindowConteudoEmbaixadaArgelia.open(map, EmbaixadaArgelia);
+					  });
+					  
+					  var EmbaixadaNigeria = new google.maps.Marker({
+					position: {lat: 38.702229, lng: -9.218119},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaNigeria = 'Embaixada da Nigéria <br><br><a href="https://www.google.com/maps/dir//Embassy+of+Nigeria,+Av.+Dom+Vasco+da+Gama+3,+1400-127+Lisboa/@38.7021666,-9.2203072,17z/data=!4m15!1m6!3m5!1s0xd1ecb63f8ef7b4b:0x79c120d70a931322!2sEmbassy+of+Nigeria!8m2!3d38.7021624!4d-9.2181185!4m7!1m0!1m5!1m1!1s0xd1ecb63f8ef7b4b:0x79c120d70a931322!2m2!1d-9.2181185!2d38.7021624" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaNigeria = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaNigeria +  "</div>"
+					  });
+
+						EmbaixadaNigeria.addListener('click', function() {
+						infowindowConteudoEmbaixadaNigeria.open(map, EmbaixadaNigeria);
+					  });
+					  
+					  var EmbaixadaIrao = new google.maps.Marker({
+					position: {lat: 38.701202, lng: -9.222866},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaIrao = 'Embaixada do Irão <br><br><a href="https://www.google.com/maps/dir//Embaixada+do+Ir%C3%A3o,+R.+Alto+do+Duque+49,+1400-009+Lisboa/@38.7011306,-9.2250654,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1ecb64ac0ddd71:0x941ffcebf807fd37!2m2!1d-9.2228767!2d38.7011264" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaIrao = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaIrao +  "</div>"
+					  });
+
+						EmbaixadaIrao.addListener('click', function() {
+						infowindowConteudoEmbaixadaIrao.open(map, EmbaixadaIrao);
+					  });
+					  
+					  var EmbaixadaPaquistao = new google.maps.Marker({
+					position: {lat: 38.707012, lng: -9.214358},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaPaquistao = 'Embaixada do Paquistão <br><br><a href="https://www.google.com/maps/dir//Embassy+of+Pakistan,+R.+Ant%C3%B3nio+Saldanha+46,+1400-021+Lisboa/@38.7072548,-9.2162034,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1ecb603048d3ab:0xcbe5e5ab78195d6!2m2!1d-9.2143345!2d38.7067679" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaPaquistão = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaPaquistao +  "</div>"
+					  });
+
+						EmbaixadaPaquistao.addListener('click', function() {
+						infowindowConteudoEmbaixadaPaquistão.open(map, EmbaixadaPaquistao);
+					  });
+					  
+					  var EmbaixadaMarrocos = new google.maps.Marker({
+					position: {lat: 38.701351, lng: -9.222663},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaMarrocos = 'Embaixada do Reino de Marrocos <br><br><a href="https://www.google.com/maps/dir//Embaixada+do+Reino+de+Marrocos+em+Portugal,+R.+Alto+do+Duque+21,+1400-009+Lisboa/@38.7012635,-9.2248521,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1ecb5d55e4fdd5:0x5542148add78380!2m2!1d-9.2226634!2d38.7012593" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaMarrocos = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaMarrocos +  "</div>"
+					  });
+
+						EmbaixadaMarrocos.addListener('click', function() {
+						infowindowConteudoEmbaixadaMarrocos.open(map, EmbaixadaMarrocos);
+					  });
+					  
+					  var EmbaixadaHolanda = new google.maps.Marker({
+					position: {lat: 38.708430, lng: -9.167416},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaHolanda = 'Embaixada da Holanda <br><br><a href="https://www.google.com/maps/dir//Embaixada+dos+Pa%C3%ADses+Baixos,+Av.+Infante+Santo+nr+43+-+5%C2%BA,+1399-011+Lisboa/@38.7083674,-9.1696152,17z/data=!4m15!1m6!3m5!1s0xd19349f5effe331:0x10337cd6f7ed6241!2sEmbaixada+dos+Pa%C3%ADses+Baixos!8m2!3d38.7083632!4d-9.1674265!4m7!1m0!1m5!1m1!1s0xd19349f5effe331:0x10337cd6f7ed6241!2m2!1d-9.1674265!2d38.7083632" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaHolanda = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaHolanda +  "</div>"
+					  });
+
+						EmbaixadaHolanda.addListener('click', function() {
+						infowindowConteudoEmbaixadaHolanda.open(map, EmbaixadaHolanda);
+					  });
+					  
+					   var EmbaixadaTai = new google.maps.Marker({
+					position: {lat: 38.701014, lng: -9.210932},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaTai = 'Embaixada da Tailandia <br><br><a href="https://www.google.com/maps/dir//Embaixada+Da+Tailandia,+Portugal,+R.+Alcolena+7,+1400-314+Lisboa/@38.7024035,-9.2102022,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1ecb5d94fb1cd9:0xdd1ea1016eea4d13!2m2!1d-9.2109216!2d38.7007859" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaTai = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaTai +  "</div>"
+					  });
+
+						EmbaixadaTai.addListener('click', function() {
+						infowindowConteudoEmbaixadaTai.open(map, EmbaixadaTai);
+					  });
+					  
+					  var EmbaixadaChina = new google.maps.Marker({
+					position: {lat: 38.709555, lng: -9.163743},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaChina = 'Embaixada da China <br><br><a href="https://www.google.com/maps/dir//Embaixada+Da+China,+R.+S%C3%A3o+Caetano+2,+1200-601+Lisboa/@38.7095343,-9.164108,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd19349e41a689a7:0x92db3f564d507437!2m2!1d-9.1637218!2d38.7094297" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaChina = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaChina +  "</div>"
+					  });
+
+						EmbaixadaChina.addListener('click', function() {
+						infowindowConteudoEmbaixadaChina.open(map, EmbaixadaChina);
+					  });
+					  
+					   var EmbaixadaCoreia = new google.maps.Marker({
+					position: {lat: 38.737219, lng: -9.147407},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaCoreia = 'Embaixada da Coreia <br><br><a href="https://www.google.com/maps/dir//Embaixada+da+Rep%C3%BAblica+da+Coreia,+Av.+Miguel+Bombarda+36,+1050-165+Lisboa/@38.7371898,-9.1495852,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd19330a45dd8c4f:0x81573058185d597e!2m2!1d-9.1473965!2d38.7371856" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaCoreia = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaCoreia +  "</div>"
+					  });
+
+						EmbaixadaCoreia.addListener('click', function() {
+						infowindowConteudoEmbaixadaCoreia.open(map, EmbaixadaCoreia);
+					  });
+					  
+					  var EmbaixadaRussia = new google.maps.Marker({
+					position: {lat: 38.3734577, lng: -9.138832},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaRussia = 'Embaixada da Russia <br><br><a href="https://www.google.com/maps/dir//Embaixada+da+Federa%C3%A7%C3%A3o+da+R%C3%BAssia,+R.+Visc.+de+Santar%C3%A9m+57,+1000-286+Lisboa/@38.7345434,-9.1410154,17z/data=!4m15!1m6!3m5!1s0xd1933a20c902011:0xb2c0044a84ca3ae4!2sEmbaixada+da+Federa%C3%A7%C3%A3o+da+R%C3%BAssia!8m2!3d38.7345392!4d-9.1388267!4m7!1m0!1m5!1m1!1s0xd1933a20c902011:0xb2c0044a84ca3ae4!2m2!1d-9.1388267!2d38.7345392" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaRussia = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaRussia +  "</div>"
+					  });
+
+						EmbaixadaRussia.addListener('click', function() {
+						infowindowConteudoEmbaixadaRussia.open(map, EmbaixadaRussia);
+					  });
+					  
+					  var EmbaixadaMalta = new google.maps.Marker({
+					position: {lat: 38.698584, lng: -9.188844},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaMalta = 'Embaixada de Malta <br><br><a href="https://www.google.com/maps/dir//Embaixada+da+Ordem+Soberana+e+Militar+de+Malta+em+Portugal,+R.+da+Junqueira+136,+1300-344+Lisboa/@38.6984791,-9.1910117,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1934b2a344ac8b:0xdd267ae451366aa!2m2!1d-9.188823!2d38.6984749" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaMalta = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaMalta +  "</div>"
+					  });
+
+						EmbaixadaMalta.addListener('click', function() {
+						infowindowConteudoEmbaixadaMalta.open(map, EmbaixadaMalta);
+					  });
+					
+					var EmbaixadaReinoUnido = new google.maps.Marker({
+					position: {lat: 38.716281, lng: -9.157378},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaReinoUnido = 'Embaixada do Reino Unido <br><br><a href="https://www.google.com/maps/dir//British+Embassy+Lisbon,+R.+de+S%C3%A3o+Bernardo+33,+1249-082+Lisboa/@38.7161592,-9.1595237,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd19336348ad59bb:0x1e839ced05922c3d!2m2!1d-9.157335!2d38.716155" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaReinoUnido = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaReinoUnido +  "</div>"
+					  });
+
+						EmbaixadaReinoUnido.addListener('click', function() {
+						infowindowConteudoEmbaixadaReinoUnido.open(map, EmbaixadaReinoUnido);
+					  });
+					  
+					  var EmbaixadaUSA = new google.maps.Marker({
+					position: {lat: 38.744235, lng: -9.163313},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaUSA = 'Embaixada dos Estados Unidos da América <br><br><a href="https://www.google.com/maps/dir//Embaixada+dos+Estados+Unidos+da+Am%C3%A9rica,+Av.+das+For%C3%A7as+Armadas+133C,+1600-081+Lisboa/@38.7441135,-9.1655127,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd19331b47e8ae57:0x47ae98883d46147c!2m2!1d-9.163324!2d38.7441093" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaUSA = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaUSA +  "</div>"
+					  });
+
+						EmbaixadaUSA.addListener('click', function() {
+						infowindowConteudoEmbaixadaUSA.open(map, EmbaixadaUSA);
+					  });
+					  
+					  var EmbaixadaTunisia = new google.maps.Marker({
+					position: {lat: 38.708594, lng: -9.215264},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaTunisia = 'Embaixada da Tunísia <br><br><a href="https://www.google.com/maps/dir//Embaxiada+da+Tunisia,+R.+Rodrigo+Rebelo,+1400-015+Lisboa/@38.7077572,-9.2325162,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1ecc9e2c629469:0x15debccd89ad75e4!2m2!1d-9.2150067!2d38.7077572" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaTunisia = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaTunisia +  "</div>"
+					  });
+
+						EmbaixadaTunisia.addListener('click', function() {
+						infowindowConteudoEmbaixadaTunisia.open(map, EmbaixadaTunisia);
+					  });
+					  
+					  var EmbaixadaTurquia = new google.maps.Marker({
+					position: {lat: 38.707432, lng: -9.215603},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaTurquia = 'Embaixada da Turquia <br><br><a href="https://www.google.com/maps/dir//Embaixada+da+Turquia,+Av.+das+Descobertas+22,+1400-318+Lisboa/@38.7074115,-9.2157743,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1ecc9e26117a2d:0x7c83a3d00fd8ba09!2m2!1d-9.2156134!2d38.707332" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaTurquia = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaTurquia +  "</div>"
+					  });
+
+						EmbaixadaTurquia.addListener('click', function() {
+						infowindowConteudoEmbaixadaTurquia.open(map, EmbaixadaTurquia);
+					  });
+					  
+					  var EmbaixadaVenezuela = new google.maps.Marker({
+					position: {lat: 38.727946, lng: -9.145306},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaVenezuela = 'Embaixada da Venezuela <br><br><a href="https://www.google.com/maps/dir//Embaixada+da+Venezuela,+Av.+Duque+de+Loul%C3%A9+47,+4%C2%BA,+1050-086+Lisboa/@38.7278332,-9.1471518,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd19339dfa1b04a5:0xa7f783a926aa9c6a!2m2!1d-9.145285!2d38.727829" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaVenezuela = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaVenezuela +  "</div>"
+					  });
+
+						EmbaixadaVenezuela.addListener('click', function() {
+						infowindowConteudoEmbaixadaVenezuela.open(map, EmbaixadaVenezuela);
+					  });
+					  
+					  var EmbaixadaDinamarca = new google.maps.Marker({
+					position: {lat: 38.720502, lng: -9.149192},
+					map: map
+					});
+					
+					var ConteudoEmbaixadaDinamarca = 'Embaixada da Dinamarca <br><br><a href="https://www.google.com/maps/dir//Embaixada+da+Dinamarca,+R.+Castilho+14,+1250-066+Lisboa/@38.720339,-9.1513065,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd193379080a7dcb:0xaa5fcb9209ecaece!2m2!1d-9.1491178!2d38.7203348" target="_blank">Direções</a>';
+
+					  var infowindowConteudoEmbaixadaDinamarca = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoEmbaixadaDinamarca +  "</div>"
+					  });
+
+						EmbaixadaDinamarca.addListener('click', function() {
+						infowindowConteudoEmbaixadaDinamarca.open(map, EmbaixadaDinamarca);
+					  });
+					  
+					  var FreguesiaBenfica = new google.maps.Marker({
+					position: {lat: 38.748869, lng: -9.197501},
+					map: map
+					});
+					
+					var ConteudoFreguesiaBenfica = 'Junta de Freguesia de Benfica <br><br><a href="https://www.google.com/maps/dir//Junta+de+Freguesia+de+Benfica,+Av.+Gomes+Pereira+17,+1549-019+Lisboa/@38.7491198,-9.1990458,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1eccc42768462b:0xd4471aadcdb63893!2m2!1d-9.1975738!2d38.7485433" target="_blank">Direções</a>';
+
+					  var infowindowConteudoFreguesiaBenfica = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoFreguesiaBenfica +  "</div>"
+					  });
+
+						FreguesiaBenfica.addListener('click', function() {
+						infowindowConteudoFreguesiaBenfica.open(map, FreguesiaBenfica);
+					  });
+					
+					var FreguesiaCarnide = new google.maps.Marker({
+					position: {lat: 38.759726, lng: -9.185622},
+					map: map
+					});
+					
+					var ConteudoFreguesiaCarnide = 'Junta de Freguesia de Carnide <br><br><a href="https://www.google.com/maps/dir//Junta+de+Freguesia+de+Carnide,+Largo+Pimenteiras+6,+Lisboa/@38.7598552,-9.1863732,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1932d237789db5:0xf3735a94daa2a739!2m2!1d-9.1856222!2d38.7596503" target="_blank">Direções</a>';
+
+					  var infowindowConteudoFreguesiaCarnide = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoFreguesiaCarnide +  "</div>"
+					  });
+
+						FreguesiaCarnide.addListener('click', function() {
+						infowindowConteudoFreguesiaCarnide.open(map, FreguesiaCarnide);
+					  });
+					  
+					  var FreguesiaLumiar = new google.maps.Marker({
+					position: {lat: 38.767775, lng: -9.158048},
+					map: map
+					});
+					
+					var ConteudoFreguesiaLumiar = 'Junta de Freguesia do Lumiar <br><br><a href="https://www.google.com/maps/dir//Junta+de+Freguesia+do+Lumiar,+Alameda+das+Linhas+de+Torres+156,+1750-149+Lisboa/@38.7679378,-9.1588531,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1932934b2f9fe5:0x7ad3cd3121d7b85d!2m2!1d-9.1580377!2d38.7676994" target="_blank">Direções</a>';
+
+					  var infowindowConteudoFreguesiaLumiar = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoFreguesiaLumiar +  "</div>"
+					  });
+
+						FreguesiaLumiar.addListener('click', function() {
+						infowindowConteudoFreguesiaLumiar.open(map, FreguesiaLumiar);
+					  });
+					  
+					  var FreguesiaSanta = new google.maps.Marker({
+					position: {lat: 38.782620, lng: -9.159557},
+					map: map
+					});
+					
+					var ConteudoFreguesiaSanta = 'Junta de Freguesia de Santa Clara <br><br><a href="https://www.google.com/maps/dir//Junta+de+Freguesia+de+Santa+Clara,+200,+Largo+do+Min.+1,+1750-017+Lisboa/@38.7829829,-9.1605398,16.75z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd193290f7e75d63:0x6b4d3a248dc4d9d2!2m2!1d-9.159575!2d38.7824879" target="_blank">Direções</a>';
+
+					  var infowindowConteudoFreguesiaSanta = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoFreguesiaSanta +  "</div>"
+					  });
+
+						FreguesiaSanta.addListener('click', function() {
+						infowindowConteudoFreguesiaSanta.open(map, FreguesiaSanta);
+					  });
+					  
+					  var FreguesiaDomingos = new google.maps.Marker({
+					position: {lat: 38.746461, lng: -9.187873},
+					map: map
+					});
+					
+					var ConteudoFreguesiaDomingos = 'Junta de Freguesia de São Domingos de Benfica <br><br><a href="https://www.google.com/maps/dir//Junta+de+Freguesia+de+S%C3%A3o+Domingos+de+Benfica,+Rua+Ant%C3%B3nio+Sa%C3%BAde,+N.%C2%BA+13,+1500-048+Lisboa/@38.7463167,-9.1881953,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1932df2e96dea3:0x9a4d0fc462d804b8!2m2!1d-9.1878713!2d38.7464172" target="_blank">Direções</a>';
+
+					  var infowindowConteudoFreguesiaDomingos = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoFreguesiaDomingos +  "</div>"
+					  });
+
+						FreguesiaDomingos.addListener('click', function() {
+						infowindowConteudoFreguesiaDomingos.open(map, FreguesiaDomingos);
+					  });
+					  
+					  var FreguesiaAjuda = new google.maps.Marker({
+					position: {lat: 38.705865, lng: -9.199147},
+					map: map
+					});
+					
+					var ConteudoFreguesiaAjuda = 'Junta de Freguesia da Ajuda <br><br><a href="https://www.google.com/maps/dir//Junta+de+Freguesia+da+Ajuda,+Cal%C3%A7ada+Ajuda+236,+1300-009+Lisboa/@38.7057521,-9.2012608,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1ecb57093c7375:0xa56bfd5c64f0e48b!2m2!1d-9.1991365!2d38.7057814" target="_blank">Direções</a>';
+
+					  var infowindowConteudoFreguesiaAjuda = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoFreguesiaAjuda +  "</div>"
+					  });
+
+						FreguesiaAjuda.addListener('click', function() {
+						infowindowConteudoFreguesiaAjuda.open(map, FreguesiaAjuda);
+					  });
+					  
+					  var FreguesiaAlcantara = new google.maps.Marker({
+					position: {lat: 38.705556, lng: -9.179306},
+					map: map
+					});
+					
+					var ConteudoFreguesiaAlcantara = 'Junta de Freguesia de Alcântara <br><br><a href="https://www.google.com/maps/dir//Junta+de+Freguesia+de+Alc%C3%A2ntara,+Rua+dos+Lusiadas+13,+1300-301+Lisboa/@38.705468,-9.181473,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1934a8a817aa9b:0x65ea09f55bc4ee0!2m2!1d-9.1792843!2d38.7054638" target="_blank">Direções</a>';
+
+					  var infowindowConteudoFreguesiaAlcantara = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoFreguesiaAlcantara +  "</div>"
+					  });
+
+						FreguesiaAlcantara.addListener('click', function() {
+						infowindowConteudoFreguesiaAlcantara.open(map, FreguesiaAlcantara);
+					  });
+					  
+					  var FreguesiaBelem = new google.maps.Marker({
+					position: {lat: 38.698505, lng: -9.204605},
+					map: map
+					});
+					
+					var ConteudoFreguesiaBelem = 'Junta de Freguesia de Belém <br><br><a href="https://www.google.com/maps/dir//Junta+de+Freguesia+de+Bel%C3%A9m,+Largo+dos+Jer%C3%B3nimos+3,+1400-161+Lisboa/@38.7003634,-9.2059778,15z/data=!4m15!1m6!3m5!1s0xd1ecb5b3aa3ace9:0xde113c203ee6db1b!2sJunta+de+Freguesia+de+Bel%C3%A9m!8m2!3d38.6981861!4d-9.204573!4m7!1m0!1m5!1m1!1s0xd1ecb5b3aa3ace9:0xde113c203ee6db1b!2m2!1d-9.204573!2d38.6981861" target="_blank">Direções</a>';
+
+					  var infowindowConteudoFreguesiaBelem = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoFreguesiaBelem +  "</div>"
+					  });
+
+						FreguesiaBelem.addListener('click', function() {
+						infowindowConteudoFreguesiaBelem.open(map, FreguesiaBelem);
+					  });
+					  
+					  var FreguesiaAlvalade = new google.maps.Marker({
+					position: {lat: 38.756394, lng: -9.136145},
+					map: map
+					});
+					
+					var ConteudoFreguesiaAlvalade = 'Junta de Freguesia de Alvalade <br><br><a href="https://www.google.com/maps/dir//Junta+de+Freguesia+de+Alvalade,+R.+Conde+Arnoso+5B,+1700-112+Lisboa/@38.7562685,-9.1405224,16z/data=!4m15!1m6!3m5!1s0xd193252c1785237:0x31113232f9c0d492!2sJunta+de+Freguesia+de+Alvalade!8m2!3d38.7562685!4d-9.136145!4m7!1m0!1m5!1m1!1s0xd193252c1785237:0x31113232f9c0d492!2m2!1d-9.136145!2d38.7562685" target="_blank">Direções</a>';
+
+					  var infowindowConteudoFreguesiaAlvalade = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoFreguesiaAlvalade +  "</div>"
+					  });
+
+						FreguesiaAlvalade.addListener('click', function() {
+						infowindowConteudoFreguesiaAlvalade.open(map, FreguesiaAlvalade);
+					  });
+					  
+					  var FreguesiaAreeiro = new google.maps.Marker({
+					position: {lat: 38.745282, lng: -9.140532},
+					map: map
+					});
+					
+					var ConteudoFreguesiaAreeiro = 'Junta de Freguesia do Areeiro <br><br><a href="https://www.google.com/maps/dir//Junta+de+Freguesia+do+Areeiro,+R.+Jo%C3%A3o+Villaret+9,+1000-067+Lisboa/@38.7449728,-9.1405102,16z/data=!4m15!1m6!3m5!1s0xd1933a16cc6bb4b:0x995718362dce5252!2sJunta+de+Freguesia+do+Areeiro!8m2!3d38.7451407!4d-9.1405264!4m7!1m0!1m5!1m1!1s0xd1933a16cc6bb4b:0x995718362dce5252!2m2!1d-9.1405264!2d38.7451407" target="_blank">Direções</a>';
+
+					  var infowindowConteudoFreguesiaAreeiro = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoFreguesiaAreeiro +  "</div>"
+					  });
+
+						FreguesiaAreeiro.addListener('click', function() {
+						infowindowConteudoFreguesiaAreeiro.open(map, FreguesiaAreeiro);
+					  });
+					  
+					  var FreguesiaArroios = new google.maps.Marker({
+					position: {lat: 38.721225, lng: -9.135013},
+					map: map
+					});
+					
+					var ConteudoFreguesiaArroios = 'Junta de Freguesia de Arroios <br><br><a href="https://www.google.com/maps/dir//Junta+de+Freguesia+de+Arroios,+Largo+do+Intendente+Pina+Manique,+1150-007+Lisboa/@38.7211562,-9.1353351,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd19338f04131e77:0xb0467be388faa985!2m2!1d-9.134993!2d38.721168" target="_blank">Direções</a>';
+
+					  var infowindowConteudoFreguesiaArroios = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoFreguesiaArroios +  "</div>"
+					  });
+
+						FreguesiaArroios.addListener('click', function() {
+						infowindowConteudoFreguesiaArroios.open(map, FreguesiaArroios);
+					  });
+					  
+					  var FreguesiaNovas = new google.maps.Marker({
+					position: {lat: 38.741317, lng: -9.147219},
+					map: map
+					});
+					
+					var ConteudoFreguesiaNovas = 'Junta de Freguesia Avenidas Novas <br><br><a href="https://www.google.com/maps/dir//Junta+de+Freguesia+Avenidas+Novas,+n%C2%BA1,+Av.+de+Berna,+1050-099+Lisboa/@38.741166,-9.1646855,14z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd193309b4fd94a1:0x45f5480544fb7b1f!2m2!1d-9.147176!2d38.741166" target="_blank">Direções</a>';
+
+					  var infowindowConteudoFreguesiaNovas = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoFreguesiaNovas +  "</div>"
+					  });
+
+						FreguesiaNovas.addListener('click', function() {
+						infowindowConteudoFreguesiaNovas.open(map, FreguesiaNovas);
+					  });
+					  
+					   var FreguesiaCampolide = new google.maps.Marker({
+					position: {lat: 38.725933, lng: -9.162275},
+					map: map
+					});
+					
+					var ConteudoFreguesiaCampolide = 'Junta de Freguesia de Campolide <br><br><a href="https://www.google.com/maps/dir//Junta+de+Freguesia+de+Campolide,+R.+de+Campolide+24B,+1070-026+Lisboa/@38.7258788,-9.1644531,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd19336a4f0d874f:0x752bf0cabcc701f9!2m2!1d-9.1622644!2d38.7258746" target="_blank">Direções</a>';
+
+					  var infowindowConteudoFreguesiaCampolide = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoFreguesiaCampolide +  "</div>"
+					  });
+
+						FreguesiaCampolide.addListener('click', function() {
+						infowindowConteudoFreguesiaCampolide.open(map, FreguesiaCampolide);
+					  });
+					  
+					   var FreguesiaAntonio = new google.maps.Marker({
+					position: {lat: 38.720168, lng: -9.141584},
+					map: map
+					});
+					
+					var ConteudoFreguesiaAntonio = 'Junta de Freguesia de Santo António <br><br><a href="https://www.google.com/maps/dir//Junta+de+Freguesia+de+Santo+Ant%C3%B3nio,+Cal%C3%A7ada+Moinho+de+Vento+3,+1150-149+Lisboa/@38.7201621,-9.1426994,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd193383bdba8b6b:0xc62d85b591ee0e36!2m2!1d-9.141589!2d38.7201056" target="_blank">Direções</a>';
+
+					  var infowindowConteudoFreguesiaAntonio = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoFreguesiaAntonio +  "</div>"
+					  });
+
+						FreguesiaAntonio.addListener('click', function() {
+						infowindowConteudoFreguesiaAntonio.open(map, FreguesiaAntonio);
+					  });
+					  
+					  var FreguesiaAntonio = new google.maps.Marker({
+					position: {lat: 38.720168, lng: -9.141584},
+					map: map
+					});
+					
+					var ConteudoFreguesiaAntonio = 'Junta de Freguesia de Santo António <br><br><a href="https://www.google.com/maps/dir//Junta+de+Freguesia+de+Santo+Ant%C3%B3nio,+Cal%C3%A7ada+Moinho+de+Vento+3,+1150-149+Lisboa/@38.7201621,-9.1426994,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd193383bdba8b6b:0xc62d85b591ee0e36!2m2!1d-9.141589!2d38.7201056" target="_blank">Direções</a>';
+
+					  var infowindowConteudoFreguesiaAntonio = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoFreguesiaAntonio +  "</div>"
+					  });
+
+						FreguesiaAntonio.addListener('click', function() {
+						infowindowConteudoFreguesiaAntonio.open(map, FreguesiaAntonio);
+					  });
+					  
+					  var FreguesiaOurique = new google.maps.Marker({
+					position: {lat: 38.715507, lng: -9.167905},
+					map: map
+					});
+					
+					var ConteudoFreguesiaOurique = 'Junta de Freguesia de Campo de Ourique <br><br><a href="https://www.google.com/maps/dir//Junta+de+Freguesia+de+Campo+de+Ourique,+R.+Azedo+Gneco+84,+1350-039+Lisboa/@38.7154194,-9.1700512,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd19335e1dbf47dd:0xd3ba5a92e7f94947!2m2!1d-9.1678625!2d38.7154152" target="_blank">Direções</a>';
+
+					  var infowindowConteudoFreguesiaOurique = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoFreguesiaOurique +  "</div>"
+					  });
+
+						FreguesiaOurique.addListener('click', function() {
+						infowindowConteudoFreguesiaOurique.open(map, FreguesiaOurique);
+					  });
+					  
+					  var FreguesiaEstrela = new google.maps.Marker({
+					position: {lat: 38.711155, lng: -9.157497},
+					map: map
+					});
+					
+					var ConteudoFreguesiaEstrela = 'Junta de Freguesia da Estrela <br><br><a href="https://www.google.com/maps/dir//Junta+de+Freguesia+da+Estrela,+R.+Almeida+Brand%C3%A3o+39,+1200-602+Lisboa/@38.7111597,-9.1591383,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1934830b0395d7:0x8c68791c0e55bff5!2m2!1d-9.157529!2d38.7110718" target="_blank">Direções</a>';
+
+					  var infowindowConteudoFreguesiaEstrela = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoFreguesiaEstrela +  "</div>"
+					  });
+
+						FreguesiaEstrela.addListener('click', function() {
+						infowindowConteudoFreguesiaEstrela.open(map, FreguesiaEstrela);
+					  });
+					  
+					  var FreguesiaMisericordia = new google.maps.Marker({
+					position: {lat: 38.711235, lng: -9.149115},
+					map: map
+					});
+					
+					var ConteudoFreguesiaMisericordia = 'Junta de Freguesia da Misericórdia <br><br><a href="https://www.google.com/maps/dir//Junta+de+Freguesia+da+Miseric%C3%B3rdia,+Largo+Dr.+Ant%C3%B3nio+de+Sousa+Macedo+7,+1200-153+Lisboa/@38.7115987,-9.1511533,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd193481b829156f:0x38fe5787cb74bcf5!2m2!1d-9.1490905!2d38.7111501" target="_blank">Direções</a>';
+
+					  var infowindowConteudoFreguesiaMisericordia = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoFreguesiaMisericordia +  "</div>"
+					  });
+
+						FreguesiaMisericordia.addListener('click', function() {
+						infowindowConteudoFreguesiaMisericordia.open(map, FreguesiaMisericordia);
+					  });
+					  
+					  var FreguesiaPenhaFranca = new google.maps.Marker({
+					position: {lat: 38.724448, lng: -9.130492},
+					map: map
+					});
+					
+					var ConteudoFreguesiaPenhaFranca = 'Freguesia Penha de França<br><br><a href="https://www.google.com/maps/dir//freguesia+penha+de+fran%C3%A7a,+R.+Tri%C3%A2ngulo+Vermelho,+1170-174+Lisboa/@38.7244943,-9.1307385,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd19338e206bf8ef:0x3e3e7b3bf958f77e!2m2!1d-9.1305025!2d38.724373" target="_blank">Direções</a>';
+
+					  var infowindowConteudoFreguesiaPenhaFranca = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoFreguesiaPenhaFranca +  "</div>"
+					  });
+
+						FreguesiaPenhaFranca.addListener('click', function() {
+						infowindowConteudoFreguesiaPenhaFranca.open(map, FreguesiaPenhaFranca);
+					  });
+					  
+					  var FreguesiaMaior = new google.maps.Marker({
+					position: {lat: 38.711487, lng: -9.136117},
+					map: map
+					});
+					
+					var ConteudoFreguesiaMaior = 'Junta de Freguesia de Santa Maria Maior <br><br><a href="https://www.google.com/maps/dir//Junta+de+Freguesia+de+Santa+Maria+Maior,+R.+dos+Fanqueiros+170,+1100-042+Lisboa/@38.7120188,-9.1382412,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1934784b95a59d:0xfe112b561767225e!2m2!1d-9.1361169!2d38.7113868" target="_blank">Direções</a>';
+
+					  var infowindowConteudoFreguesiaMaior = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoFreguesiaMaior +  "</div>"
+					  });
+
+						FreguesiaMaior.addListener('click', function() {
+						infowindowConteudoFreguesiaMaior.open(map, FreguesiaMaior);
+					  });
+					  
+					  var FreguesiaVicente = new google.maps.Marker({
+					position: {lat: 38.719845, lng: -9.129440},
+					map: map
+					});
+					
+					var ConteudoFreguesiaVicente = 'Junta de Freguesia de São Vicente <br><br><a href="https://www.google.com/maps/dir//Junta+de+Freguesia+de+S%C3%A3o+Vicente,+R.+Josefa+de+%C3%93bidos+5,+1170-167+Lisboa/@38.7197378,-9.1305399,18z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd19338eaede564d:0x46937edeb6130de2!2m2!1d-9.1294348!2d38.7197985" target="_blank">Direções</a>';
+
+					  var infowindowConteudoFreguesiaVicente = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoFreguesiaVicente +  "</div>"
+					  });
+
+						FreguesiaVicente.addListener('click', function() {
+						infowindowConteudoFreguesiaVicente.open(map, FreguesiaVicente);
+					  });
+					  
+					  var FreguesiaBeato = new google.maps.Marker({
+					position: {lat: 38.726314, lng: -9.112238},
+					map: map
+					});
+					
+					var ConteudoFreguesiaBeato = 'Junta de Freguesia do Beato <br><br><a href="https://www.google.com/maps/dir//Junta+de+Freguesia+do+Beato,+Rua+de+Xabregas+67,+1900-439+Lisboa/@38.7306157,-9.1211214,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1933e55570003b:0x962de8a419bb854b!2m2!1d-9.1123223!2d38.7259701" target="_blank">Direções</a>';
+
+					  var infowindowConteudoFreguesiaBeato = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoFreguesiaBeato +  "</div>"
+					  });
+
+						FreguesiaBeato.addListener('click', function() {
+						infowindowConteudoFreguesiaBeato.open(map, FreguesiaBeato);
+					  });
+					  
+					  var FreguesiaMarvila = new google.maps.Marker({
+					position: {lat: 38.747302, lng: -9.108844},
+					map: map
+					});
+					
+					var ConteudoFreguesiaMarvila = 'Junta de Freguesia de Marvila <br><br><a href="https://www.google.com/maps/dir//Junta+de+Freguesia+de+Marvila,+Av.+Paulo+VI+4,+1950-159+Lisboa/@38.7472724,-9.1104853,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1933d01cd67d7d:0x866e1d86b8fd7ea3!2m2!1d-9.108876!2d38.7471678" target="_blank">Direções</a>';
+
+					  var infowindowConteudoFreguesiaMarvila = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoFreguesiaMarvila +  "</div>"
+					  });
+
+						FreguesiaMarvila.addListener('click', function() {
+						infowindowConteudoFreguesiaMarvila.open(map, FreguesiaMarvila);
+					  });
+					  
+					  var FreguesiaOlivais = new google.maps.Marker({
+					position: {lat: 38.772759, lng: -9.112887},
+					map: map
+					});
+					
+					var ConteudoFreguesiaOlivais = 'Junta de Freguesia de Olivais <br><br><a href="https://www.google.com/maps/dir//Junta+de+Freguesia+de+Olivais,+Lote+C+1849-,+R.+Gen.+Silva+Freire+28,+1800-048+Lisboa/@38.7727132,-9.1132625,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd19323ca9d6aa65:0xbabaf39e573fae04!2m2!1d-9.1128893!2d38.7726688" target="_blank">Direções</a>';
+
+					  var infowindowConteudoFreguesiaOlivais = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoFreguesiaOlivais +  "</div>"
+					  });
+
+						FreguesiaOlivais.addListener('click', function() {
+						infowindowConteudoFreguesiaOlivais.open(map, FreguesiaOlivais);
+					  });
+					  
+					  var FreguesiaNacoes = new google.maps.Marker({
+					position: {lat: 38.777863, lng: -9.095232},
+					map: map
+					});
+					
+					var ConteudoFreguesiaNacoes = 'Junta de Freguesia do Parque das Nações <br><br><a href="https://www.google.com/maps/dir//Junta+de+Freguesia+do+Parque+das+Na%C3%A7%C3%B5es,+Alameda+dos+Oceanos+83,+1990-069+Lisboa/@38.7777665,-9.0974418,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0xd1931f6831f252b:0xd76036293a096b04!2m2!1d-9.0952531!2d38.7777623" target="_blank">Direções</a>';
+
+					  var infowindowConteudoFreguesiaNacoes = new google.maps.InfoWindow({
+						content: "<div class='scroll-fix'>"+ ConteudoFreguesiaNacoes +  "</div>"
+					  });
+
+						FreguesiaNacoes.addListener('click', function() {
+						infowindowConteudoFreguesiaNacoes.open(map, FreguesiaNacoes);
+					  });
+					  
+					  var PoliciaPracaComercio  = new google.maps.Marker({
+ position: {lat: 38.708041, lng:  -9.138294},
+map: map
+					 });
+					
+var ConteudoPoliciaPracaComercio = '2ª Esquadra da Polícia - Praça do Comércio <br><br><a href="https://www.google.com/maps/place/Rua+do+Arsenal+2,+1100-148+Lisboa/@38.7082421,-9.1384351,980a,35y,-111.04h/data=!3m1!1e3!4m13!1m7!3m6!1s0xd19347bd71d28a9:0x448a6711789e804a!2sRua+do+Arsenal+2,+1100-148+Lisboa!3b1!8m2!3d38.7080572!4d-9.138035!3m4!1s0xd19347bd71d28a9:0x448a6711789e804a!8m2!3d38.7080572!4d-9.138035" target="_blank">Direções</a>';
+
+var infowindowConteudoPoliciaPracaComercio = new google.maps.InfoWindow({
+content: "<div class='scroll-fix'>"+ConteudoPoliciaPracaComercio+ "</div>"
+					  });
+
+PoliciaPracaComercio.addListener('click', function() {
+infowindowConteudoPoliciaPracaComercio.open(map, PoliciaPracaComercio);
+					  });
+
+
+
+var PoliciaBairroAlto = new google.maps.Marker({
+position: {lat: 38.713216, lng: -9.145105},
+map: map
+					 });
+					
+var ConteudoPoliciaBairroAlto = '3ª Esquadra da Polícia - Bairro Alto <br><br><a href="https://www.google.com/maps/place/R.+da+Atalaia+138/@38.7131765,-9.1450714,82m/data=!3m1!1e3!4m6!3m5!1s0xd1933800449461b:0xe791e4448dcf59b2!4b1!8m2!3d38.7131831!4d-9.1451016" target="_blank">Direções</a>';
+
+var infowindowConteudoPoliciaBairroAlto = new google.maps.InfoWindow({
+content: "<div class='scroll-fix'>"+ConteudoPoliciaBairroAlto + "</div>"
+					  });
+
+PoliciaBairroAlto.addListener('click', function() {
+infowindowConteudoPoliciaBairroAlto.open(map, PoliciaBairroAlto);
+					  });
+
+
+
+var PoliciaSantaMarta = new google.maps.Marker({
+position: {lat: 38.725438, lng: -9.146806},
+map: map
+					 });
+					
+var ConteudoPoliciaSantaMarta = '4ª Esquadra da Polícia - Santa Marta<br><br><a href="https://www.google.com/maps/place/R.+de+Santa+Marta+61B,+1150-006+Lisboa/@38.7254285,-9.1473507,254m/data=!3m1!1e3!4m13!1m7!3m6!1s0xd193377c99cf03f:0xecb357903e19dcd9!2sR.+de+Santa+Marta+61B,+1150-006+Lisboa!3b1!8m2!3d38.7253756!4d-9.1468399!3m4!1s0xd193377c99cf03f:0xecb357903e19dcd9!8m2!3d38.7253756!4d-9.1468399" target="_blank">Direções</a>';
+
+var infowindowConteudoPoliciaSantaMarta = new google.maps.InfoWindow({
+content: "<div class='scroll-fix'>"+ConteudoPoliciaSantaMarta + "</div>"
+					  });
+
+PoliciaSantaMarta.addListener('click', function() {
+infowindowConteudoPoliciaSantaMarta.open(map, PoliciaSantaMarta);
+					  });
+
+
+
+
+var PoliciaCaisDoSodre = new google.maps.Marker({
+position: {lat: 38.708827, lng: -9.150827},
+map: map
+					 });
+					
+var ConteudoPoliciaCaisDoSodre = '5ª Esquadra da Polícia - Cais Do Sodré, Boavista <br><br><a href="https://www.google.com/maps/place/Rua+da+Boavista+1,+1200-109+Lisboa/@38.7090209,-9.1514214,244m/data=!3m1!1e3!4m13!1m7!3m6!1s0xd193481614d8ffd:0x295614b97235e404!2sRua+da+Boavista+1,+1200-109+Lisboa!3b1!8m2!3d38.7088348!4d-9.1508179!3m4!1s0xd193481614d8ffd:0x295614b97235e404!8m2!3d38.7088348!4d-9.1508179" target="_blank">Direções</a>';
+
+var infowindowConteudoPoliciaCaisDoSodre = new google.maps.InfoWindow({
+content: "<div class='scroll-fix'>"+ConteudoPoliciaCaisDoSodre + "</div>"
+					  });
+
+PoliciaCaisDoSodre.addListener('click', function() {
+infowindowConteudoPoliciaCaisDoSodre.open(map, PoliciaCaisDoSodre);
+					  });
+
+
+
+
+var PoliciaMouraria = new google.maps.Marker({
+position: {lat: 38.716100, lng: -9.135315},
+map: map
+					 });
+					
+var ConteudoPoliciaMouraria = '6ª Esquadra da Polícia - Mouraria <br><br><a href="https://www.google.com/maps/place/R.+da+Mouraria+64,+1100-246+Lisboa/@38.7161045,-9.1353497,74m/data=!3m1!1e3!4m8!1m2!2m1!1s+Mouraria,+64,+Ed%C3%ADficio+Amparo,+1100+-+364+Lisboa!3m4!1s0xd193387cd0b07b5:0xcf577df6de1b864c!8m2!3d38.7161132!4d-9.135335" target="_blank">Direções</a>';
+
+var infowindowConteudoPoliciaMouraria = new google.maps.InfoWindow({
+content: "<div class='scroll-fix'>"+ConteudoPoliciaMouraria + "</div>"
+					  });
+
+PoliciaMouraria.addListener('click', function() {
+infowindowConteudoPoliciaMouraria.open(map, PoliciaMouraria);
+					  });
+
+
+
+
+var PoliciaRossio = new google.maps.Marker({
+position: {lat: 38.714966, lng: -9.140013},
+map: map
+					 });
+					
+var ConteudoPoliciaRossio = '8ª Esquadra da Polícia - Rossio <br><br><a href="https://www.google.com/maps/place/Largo+do+Regedor+2,+1249-970+Lisboa/@38.7149446,-9.1422982,593m/data=!3m1!1e3!4m13!1m7!3m6!1s0xd193380cca94aef:0xb400cec47d21b6d1!2sLargo+do+Regedor+2,+1249-970+Lisboa!3b1!8m2!3d38.7149404!4d-9.1401095!3m4!1s0xd193380cca94aef:0xb400cec47d21b6d1!8m2!3d38.7149404!4d-9.1401095" target="_blank">Direções</a>';
+
+var infowindowConteudoPoliciaRossio = new google.maps.InfoWindow({
+content: "<div class='scroll-fix'>"+ConteudoPoliciaRossio + "</div>"
+					  });
+
+PoliciaRossio.addListener('click', function() {
+infowindowConteudoPoliciaRossio.open(map, PoliciaRossio);
+					  });
+
+
+
+
+
+var PoliciaArroios = new google.maps.Marker({
+position: {lat: 38.731868, lng: -9.136365},
+map: map
+					 });
+					
+var ConteudoPoliciaArroios = '10ª Esquadra da Polícia - Arroios <br><br><a href="https://www.google.com/maps/place/10%C2%AA+Esquadra+-+Arroios,+1000-024+Lisboa/@38.7318446,-9.1374297,302m/data=!3m2!1e3!4b1!4m13!1m7!3m6!1s0xd1933984cb6d295:0x26ecb1e8fd444b6d!2sRua+de+Arroios+164A,+1000-032+Lisboa!3b1!8m2!3d38.7317953!4d-9.1363412!3m4!1s0xd1933984ca2e7bb:0x3b1b9777111b97f!8m2!3d38.7318686!4d-9.1363408" target="_blank">Direções</a>';
+
+var infowindowConteudoPoliciaArroios= new google.maps.InfoWindow({
+content: "<div class='scroll-fix'>"+ConteudoPoliciaArroios + "</div>"
+					  });
+
+PoliciaArroios.addListener('click', function() {
+infowindowConteudoPoliciaArroios.open(map, PoliciaArroios);
+					  });
+
+
+
+var PoliciaOlaias = new google.maps.Marker({
+position: {lat: 38.739313, lng: -9.126046},
+map: map
+					 });
+					
+var ConteudoPoliciaOlaias = '12ª Esquadra da Polícia - Olaias <br><br><a href="https://www.google.com/maps/place/12%C2%AA+Esquadra+-+Olaias/@38.7392987,-9.1271075,297m/data=!3m2!1e3!4b1!4m13!1m7!3m6!1s0xd1933bf2150fb4d:0xea6304e54ff0d909!2sR.+Am%C3%A9rico+Dur%C3%A3o+3,+1900-064+Lisboa!3b1!8m2!3d38.7393684!4d-9.12593!3m4!1s0xd1933bf2155e241:0x5443de9f5eb2a4c6!8m2!3d38.7392966!4d-9.1260121" target="_blank">Direções</a>';
+
+var infowindowConteudoPoliciaOlaias = new google.maps.InfoWindow({
+content: "<div class='scroll-fix'>"+ConteudoPoliciaOlaias + "</div>"
+					  });
+
+PoliciaOlaias.addListener('click', function() {
+infowindowConteudoPoliciaOlaias.open(map, PoliciaOlaias);
+					  });
+
+
+
+
+var PoliciaChelasI = new google.maps.Marker({
+position: {lat: 38.753466, lng: -9.114265},
+map: map
+					 });
+					
+var ConteudoPoliciaChelasI= '14ª Esquadra da Polícia - Chelas Zona I<br><br><a href="https://www.google.com/maps/place/PSP+-+14%C2%AA+Esquadra+(Chelas)/@38.7533863,-9.116558,593m/data=!3m1!1e3!4m12!1m6!3m5!1s0xd1933cdba465843:0x23e2dc5480e5c7e0!2sPSP+-+14%C2%AA+Esquadra+(Chelas)!8m2!3d38.7533821!4d-9.1143693!3m4!1s0xd1933cdba465843:0x23e2dc5480e5c7e0!8m2!3d38.7533821!4d-9.1143693" target="_blank">Direções</a>';
+
+var infowindowConteudoPoliciaChelasI = new google.maps.InfoWindow({
+content: "<div class='scroll-fix'>"+ConteudoPoliciaChelasI + "</div>"
+					  });
+
+PoliciaChelasI.addListener('click', function() {
+infowindowConteudoPoliciaChelasI.open(map, PoliciaChelasI);
+					  });
+
+
+
+var PoliciaCaminhosDeFerro = new google.maps.Marker({
+position: {lat: 38.713185, lng: -9.125059},
+map: map
+					 });
+					
+var ConteudoPoliciaCaminhosDeFerro = '14ª Esquadra da Polícia - Chelas Zona I<br><br><a href="https://www.google.com/maps/search/Pra%C3%A7a+Museu+da+Artilharia,+1,+1100+-+366+Lisboa/@38.7132079,-9.1253362,71m/data=!3m1!1e3" target="_blank">Direções</a>';
+
+var infowindowConteudoPoliciaCaminhosDeFerro = new google.maps.InfoWindow({
+content: "<div class='scroll-fix'>"+ConteudoPoliciaCaminhosDeFerro + "</div>"
+					  });
+
+PoliciaCaminhosDeFerro.addListener('click', function() {
+infowindowConteudoPoliciaCaminhosDeFerro.open(map, PoliciaCaminhosDeFerro);
+					  });
+
+
+
+var PoliciaChelasJ = new google.maps.Marker({
+position: {lat: 38.747290, lng: -9.112354},
+map: map
+					 });
+					
+var ConteudoPoliciaChelasJ = '16ª Esquadra da Polícia - Chelas Zona J<br><br><a href="https://www.google.com/maps/place/16%C2%AA+Esquadra+-+Zona+J+-+Chelas/@38.7470462,-9.1125214,149m/data=!3m1!1e3!4m13!1m7!3m6!1s0xd1933d01cd6b6ef:0xf3730acc452b7fba!2sAv.+Jo%C3%A3o+Paulo+II+526,+1950-111+Lisboa!3b1!8m2!3d38.7473146!4d-9.1122212!3m4!1s0xd1933d01d159cdb:0x107c5bfd161ba60f!8m2!3d38.7472719!4d-9.1124457" target="_blank">Direções</a>';
+
+var infowindowConteudoPoliciaChelasJ = new google.maps.InfoWindow({
+content: "<div class='scroll-fix'>"+ConteudoPoliciaChelasJ + "</div>"
+					  });
+
+PoliciaChelasJ.addListener('click', function() {
+infowindowConteudoPoliciaChelasJ.open(map, PoliciaChelasJ);
+					  });
+
+
+
+var PoliciaCampoGrande = new google.maps.Marker({
+position: {lat: 38.749667, lng: -9.146806},
+map: map
+					 });
+					
+var ConteudoPoliciaCampoGrande = '18ª Esquadra da Polícia - Campo Grande<br><br><a href="https://www.google.com/maps/place/18%C2%AA+Esquadra+-+Campo+Grande/@38.7496438,-9.1474164,148m/data=!3m1!1e3!4m13!1m7!3m6!1s0xd193300b7acca39:0x17937acce41d1ab8!2sR.+Afonso+Lopes+Vieira+2A,+1700-162+Lisboa!3b1!8m2!3d38.7496045!4d-9.1468535!3m4!1s0xd193300b7aace4d:0x7b06bcecbaa53552!8m2!3d38.7496428!4d-9.1468692" target="_blank">Direções</a>';
+
+var infowindowConteudoPoliciaCampoGrande = new google.maps.InfoWindow({
+content: "<div class='scroll-fix'>"+ConteudoPoliciaCampoGrande + "</div>"
+					  });
+
+PoliciaCampoGrande.addListener('click', function() {
+infowindowConteudoPoliciaCampoGrande.open(map, PoliciaCampoGrande);
+					  });
+
+
+
+var PoliciaTelheiras = new google.maps.Marker({
+position: {lat: 38.762631, lng: -9.164941},
+map: map
+					 });
+					
+var ConteudoPoliciaTelheiras = '19ª Esquadra da Polícia - Telheiras<br><br><a href="https://www.google.com/maps/place/PSP+Telheiras+-+19.%C2%AA+Esquadra+de+Lisboa/@38.7626297,-9.1654827,148m/data=!3m2!1e3!4b1!4m12!1m6!3m5!1s0xd1932e7cd5a4a09:0xa18dca2e4bf70496!2sPSP+Telheiras+-+19.%C2%AA+Esquadra+de+Lisboa!8m2!3d38.7626287!4d-9.1649355!3m4!1s0xd1932e7cd5a4a09:0xa18dca2e4bf70496!8m2!3d38.7626287!4d-9.1649355" target="_blank">Direções</a>';
+
+var infowindowConteudoPoliciaTelheiras = new google.maps.InfoWindow({
+content: "<div class='scroll-fix'>"+ConteudoPoliciaTelheiras + "</div>"
+					  });
+
+PoliciaTelheiras.addListener('click', function() {
+infowindowConteudoPoliciaTelheiras.open(map, PoliciaTelheiras);
+					  });
+
+
+
+var PoliciaBenfica  = new google.maps.Marker({
+position: {lat: 38.745847, lng: -9.199111},
+map: map
+					 });
+					
+var ConteudoPoliciaBenfica  = '20ª Esquadra da Polícia - Benfica <br><br><a href="https://www.google.com/maps/place/PSP+-+3%C2%AA+Divis%C3%A3o/@38.7457942,-9.20131,591m/data=!3m2!1e3!4b1!4m13!1m7!3m6!1s0xd1eccd73a640511:0x286fdc6c34dfedc3!2sR.+Andr%C3%A9+Resende,+1500-040+Lisboa!3b1!8m2!3d38.7468853!4d-9.1991996!3m4!1s0xd1eccd7382a5d4b:0xff70ca54feda9b29!8m2!3d38.7457898!4d-9.1991267" target="_blank">Direções</a>';
+
+var infowindowConteudoPoliciaBenfica  = new google.maps.InfoWindow({
+content: "<div class='scroll-fix'>"+ConteudoPoliciaBenfica + "</div>"
+					  });
+
+PoliciaBenfica.addListener('click', function() {
+infowindowConteudoPoliciaBenfica.open(map, PoliciaBenfica);
+					  });
+
+
+
+var PoliciaCampolide  = new google.maps.Marker({
+position: {lat: 38.730192, lng: -9.158130},
+map: map
+					 });
+					
+var ConteudoPoliciaCampolide  = '21ª Esquadra da Polícia - Campolide <br><br><a href="https://www.google.com/maps/place/Estabelecimento+Prisional+de+Lisboa/@38.7318578,-9.1597196,591m/data=!3m1!1e3!4m13!1m7!3m6!1s0xd19336d4e380943:0xe00a8ca4f9b2ddef!2sPal%C3%A1cio+da+Justi%C3%A7a,+Rua+Marqu%C3%AAs+de+Fronteira,+Lisboa!3b1!8m2!3d38.7322102!4d-9.1575504!3m4!1s0xd19336d9ffe93bd:0xe264ce45c0c61e48!8m2!3d38.730156!4d-9.1581345" target="_blank">Direções</a>';
+
+var infowindowConteudoPoliciaCampolide  = new google.maps.InfoWindow({
+content: "<div class='scroll-fix'>"+ConteudoPoliciaCampolide + "</div>"
+					  });
+
+PoliciaCampolide.addListener('click', function() {
+infowindowConteudoPoliciaCampolide.open(map, PoliciaCampolide);
+					  });
+
+
+
+
+var PoliciaRato = new google.maps.Marker({
+position: {lat: 38.720433, lng: -9.155747},
+map: map
+					 });
+					
+var ConteudoPoliciaRato = '22ª Esquadra da Polícia - Rato <br><br><a href="https://www.google.com/maps/place/PSP+-+22%C2%AA+Esquadra+(Rato)/@38.7204159,-9.1565175,209m/data=!3m2!1e3!4b1!4m8!1m2!2m1!1sPra%C3%A7a+Rato,+1,+1250+-+185+Lisboa!3m4!1s0xd19337afefb6e67:0x7a357813375d4e3f!8m2!3d38.7204144!4d-9.1557447" target="_blank">Direções</a>';
+
+var infowindowConteudoPoliciaRato = new google.maps.InfoWindow({
+content: "<div class='scroll-fix'>"+ConteudoPoliciaRato + "</div>"
+					  });
+
+PoliciaRato.addListener('click', function() {
+infowindowConteudoPoliciaRato.open(map, PoliciaRato);
+					  });
+
+
+
+
+var PoliciaCampodeOurique = new google.maps.Marker({
+position: {lat: 38.715244, lng: -9.167876},
+map: map
+					 });
+					
+var ConteudoPoliciaCampodeOurique = '24ª Esquadra da Polícia - Campo de Ourique <br><br><a href="https://www.google.com/maps/place/PSP+-+24%C2%AA+Esquadra+(Campo+de+Ourique)/@38.7152705,-9.1677582,120m/data=!3m1!1e3!4m13!1m7!3m6!1s0xd193360a06d7d57:0x1d6559a7b925c39d!2sR.+Azedo+Gneco+84,+Lisboa!3b1!8m2!3d38.7153671!4d-9.1678403!3m4!1s0xd19335e1e5d2157:0x28c738c32120103c!8m2!3d38.7152368!4d-9.167891" target="_blank">Direções</a>';
+
+var infowindowConteudoPoliciaCampodeOurique = new google.maps.InfoWindow({
+content: "<div class='scroll-fix'>"+ConteudoPoliciaCampodeOurique + "</div>"
+					  });
+
+PoliciaCampodeOurique.addListener('click', function() {
+infowindowConteudoPoliciaCampodeOurique.open(map, PoliciaCampodeOurique);
+					  });
+
+
+
+
+var PoliciaBelem = new google.maps.Marker({
+position: {lat: 38.697359, lng: -9.201651},
+map: map
+					 });
+					
+var ConteudoPoliciaBelem = '26ª Esquadra da Polícia - Belém <br><br><a href="https://www.google.com/maps/place/PSP+-+26.%C2%AA+Esquadra+(Bel%C3%A9m)/@38.6975776,-9.2018537,115m/data=!3m1!1e3!4m13!1m7!3m6!1s0xd1ecb4f8d849c19:0x66e7079883756294!2sPra%C3%A7a+Afonso+de+Albuquerque,+1300-004+Lisboa!3b1!8m2!3d38.6967513!4d-9.2011375!3m4!1s0xd1ecb455ab1c473:0x178ea4e38158a8fe!8m2!3d38.6973586!4d-9.2016453" target="_blank">Direções</a>';
+
+var infowindowConteudoPoliciaBelem = new google.maps.InfoWindow({
+content: "<div class='scroll-fix'>"+ConteudoPoliciaBelem + "</div>"
+					  });
+
+PoliciaBelem.addListener('click', function() {
+infowindowConteudoPoliciaBelem.open(map, PoliciaBelem);
+					  });
+
+
+
+var PoliciaCalvario = new google.maps.Marker({
+position: {lat: 38.704515, lng: -9.177675},
+map: map
+					 });
+					
+var ConteudoPoliciaCalvario = '28ª Esquadra da Polícia - Calvário <br><br><a href="https://www.google.com/maps/place/PSP+-+4%C2%AA+Divis%C3%A3o+Policial+%2F+28%C2%AA+Esquadra+(Calv%C3%A1rio)+%2F+4%C2%AA+Esquadra+de+Investiga%C3%A7%C3%A3o+Criminal+de+Lisboa/@38.7044704,-9.1799025,593m/data=!3m2!1e3!4b1!4m8!1m2!2m1!1sPra%C3%A7a+Calv%C3%A1rio,+7,+1300+-+113+Lisboa!3m4!1s0xd1934a5e8a2261d:0x87f4a310f3b07dcf!8m2!3d38.7044662!4d-9.1777138" target="_blank">Direções</a>';
+
+var infowindowConteudoPoliciaCalvario = new google.maps.InfoWindow({
+content: "<div class='scroll-fix'>"+ConteudoPoliciaCalvario + "</div>"
+					  });
+
+PoliciaCalvario.addListener('click', function() {
+infowindowConteudoPoliciaCalvario.open(map, PoliciaCalvario);
+					  });
+
+
+
+var PoliciaQuintadoCabrinha = new google.maps.Marker({
+position: {lat: 38.711409, lng: -9.175257},
+map: map
+					 });
+					
+var ConteudoPoliciaQuintadoCabrinha = '29ª Esquadra da Polícia - Quinta do Cabrinha <br><br><a href="https://www.google.com/maps/place/R.+da+Quinta+do+Cabrinha+5,+1300-232+Lisboa/@38.7109552,-9.1750647,178m/data=!3m1!1e3!4m13!1m7!3m6!1s0xd19335891ade287:0xc5ec56d4dc5ae231!2sR.+da+Quinta+do+Cabrinha+5,+1300-232+Lisboa!3b1!8m2!3d38.7114041!4d-9.1752573!3m4!1s0xd19335891ade287:0xc5ec56d4dc5ae231!8m2!3d38.7114041!4d-9.1752573" target="_blank">Direções</a>';
+
+var infowindowConteudoPoliciaQuintadoCabrinha = new google.maps.InfoWindow({
+content: "<div class='scroll-fix'>"+ConteudoPoliciaQuintadoCabrinha + "</div>"
+					  });
+
+PoliciaQuintadoCabrinha.addListener('click', function() {
+infowindowConteudoPoliciaQuintadoCabrinha.open(map, PoliciaQuintadoCabrinha);
+					  });
+
+
+
+var PoliciaLapa = new google.maps.Marker({
+position: {lat: 38.711136, lng: -9.156426},
+map: map
+					 });
+					
+var ConteudoPoliciaLapa = '30ª Esquadra da Polícia - Lapa <br><br><a href="https://www.google.pt/maps/place/Pol%C3%ADcia+de+Seguran%C3%A7a+P%C3%BAblica/@38.7111366,-9.1570561,172m/data=!3m2!1e3!4b1!4m12!1m6!3m5!1s0xd193482bc020b47:0x8edbbcd8bd9feed7!2zUG9sw61jaWEgZGUgU2VndXJhbsOnYSBQw7pibGljYQ!8m2!3d38.7111354!4d-9.1564216!3m4!1s0xd193482bc020b47:0x8edbbcd8bd9feed7!8m2!3d38.7111354!4d-9.1564216" target="_blank">Direções</a>';
+
+var infowindowConteudoPoliciaLapa = new google.maps.InfoWindow({
+content: "<div class='scroll-fix'>"+ConteudoPoliciaLapa + "</div>"
+					  });
+
+PoliciaLapa.addListener('click', function() {
+infowindowConteudoPoliciaLapa.open(map, PoliciaLapa);
+					  });
+
+
+
+
+var PoliciaHortaNova = new google.maps.Marker({
+position: {lat: 38.766606, lng: -9.181314},
+map: map
+					 });
+					
+var ConteudoPoliciaHortaNova = '32ª Esquadra da Polícia - Bairro da Horta Nova <br><br><a href="https://www.google.com/maps/place/PSP+-+32%C2%AA+Esquadra+(Horta+Nova)/@38.7665669,-9.181888,148m/data=!3m2!1e3!4b1!4m5!3m4!1s0xd1932cf26a1eb95:0x3db6ce2991fd1c2d!8m2!3d38.7665659!4d-9.1813409" target="_blank">Direções</a>';
+
+var infowindowConteudoPoliciaHortaNova = new google.maps.InfoWindow({
+content: "<div class='scroll-fix'>"+ConteudoPoliciaHortaNova + "</div>"
+					  });
+
+PoliciaHortaNova.addListener('click', function() {
+infowindowConteudoPoliciaHortaNova.open(map, PoliciaHortaNova);
+					  });
+
+
+
+var PoliciaOlivais = new google.maps.Marker({
+position: {lat: 38.764617, lng: -9.119752},
+map: map
+					 });
+					
+var ConteudoPoliciaOlivais = '34ª Esquadra da Polícia - Olivais <br><br><a href="https://www.google.pt/maps/place/34%C2%AA+Esquadra+-+Olivais,+1800-093+Lisboa/@38.7646092,-9.1219575,593m/data=!3m1!1e3!4m13!1m7!3m6!1s0xd1932371b9365d3:0xf43705cbfa68466!2s34%C2%AA+Esquadra+-+Olivais,+1800-093+Lisboa!3b1!8m2!3d38.7645907!4d-9.1197187!3m4!1s0xd1932371b9365d3:0xf43705cbfa68466!8m2!3d38.7645907!4d-9.1197187" target="_blank">Direções</a>';
+
+var infowindowConteudoPoliciaOlivais = new google.maps.InfoWindow({
+content: "<div class='scroll-fix'>"+ConteudoPoliciaOlivais + "</div>"
+					  });
+
+PoliciaOlivais.addListener('click', function() {
+infowindowConteudoPoliciaOlivais.open(map, PoliciaOlivais);
+					  });
+
+
+
+var PoliciaPadreCruz = new google.maps.Marker({
+position: {lat: 38.769475, lng: -9.192926},
+map: map
+					 });
+					
+var ConteudoPoliciaPadreCruz = '36ª Esquadra da Polícia - Bairro Padre Cruz <br><br><a href="https://www.google.pt/maps/place/36%C2%AA+Esquadra+-+Bairro+Padre+Cruz/@38.7694617,-9.1951108,593m/data=!3m1!1e3!4m12!1m6!3m5!1s0xd1ecd35a899b3a5:0x5558f2d70a2d0dc7!2s36%C2%AA+Esquadra+-+Bairro+Padre+Cruz!8m2!3d38.7694617!4d-9.1929221!3m4!1s0xd1ecd35a899b3a5:0x5558f2d70a2d0dc7!8m2!3d38.7694617!4d-9.1929221" target="_blank">Direções</a>';
+
+var infowindowConteudoPoliciaPadreCruz = new google.maps.InfoWindow({
+content: "<div class='scroll-fix'>"+ConteudoPoliciaPadreCruz + "</div>"
+					  });
+
+PoliciaPadreCruz.addListener('click', function() {
+infowindowConteudoPoliciaPadreCruz.open(map, PoliciaPadreCruz);
+					  });
+
+
+
+
+var PoliciaSerafina = new google.maps.Marker({
+position: {lat: 38.734083, lng: -9.171590},
+map: map
+					 });
+					
+var ConteudoPoliciaSerafina = '37ª Esquadra da Polícia - Serafina <br><br><a href="https://www.google.pt/maps/place/37%C2%AA+Esquadra+-+Serafina,+Lisboa/@38.7340532,-9.1738541,17z/data=!4m13!1m7!3m6!1s0xd19333f1e5ced9b:0xb1e2e13592c96be7!2s37%C2%AA+Esquadra+-+Serafina,+Lisboa!3b1!8m2!3d38.7340652!4d-9.1716067!3m4!1s0xd19333f1e5ced9b:0xb1e2e13592c96be7!8m2!3d38.7340652!4d-9.1716067" target="_blank">Direções</a>';
+
+var infowindowConteudoPoliciaSerafina = new google.maps.InfoWindow({
+content: "<div class='scroll-fix'>"+ConteudoPoliciaSerafina + "</div>"
+					  });
+
+PoliciaSerafina.addListener('click', function() {
+infowindowConteudoPoliciaSerafina.open(map, PoliciaSerafina);
+					  });
+
+
+
+var PoliciaBelaVista = new google.maps.Marker({
+position: {lat: 38.522769, lng: -8.869360},
+map: map
+					 });
+					
+var ConteudoPoliciaBelaVista = '38ª Esquadra da Polícia - Bela Vista <br><br><a href="https://www.google.pt/maps/place/PSP+-+2%C2%AA+Esquadra+(Bela+Vista)/@38.52276,-8.8700343,184m/data=!3m2!1e3!4b1!4m8!1m2!2m1!1s38%C2%AA+Esquadra+da+Pol%C3%ADcia+-+Bela+Vista!3m4!1s0xd1942f762a7955f:0xc5cb3023c56f5eb!8m2!3d38.5227587!4d-8.8693555" target="_blank">Direções</a>';
+
+var infowindowConteudoPoliciaBelaVista = new google.maps.InfoWindow({
+content: "<div class='scroll-fix'>"+ConteudoPoliciaBelaVista + "</div>"
+					  });
+
+PoliciaBelaVista.addListener('click', function() {
+infowindowConteudoPoliciaBelaVista.open(map, PoliciaBelaVista);
+					  });
+
+
+
+var PoliciaParqueNacoes = new google.maps.Marker({
+position: {lat: 38.782215, lng: -9.095039},
+map: map
+					 });
+					
+var ConteudoPoliciaParqueNacoes = '40ª Esquadra da Polícia - Parque das Nações <br><br><a href="https://www.google.pt/maps/place/PSP+-+40%C2%AA+Esquadra+(Parque+das+Na%C3%A7%C3%B5es)/@38.7821763,-9.0952662,148m/data=!3m1!1e3!4m12!1m6!3m5!1s0xd1931f39b1f8049:0x1992f355ea7fc221!2sPSP+-+40%C2%AA+Esquadra+(Parque+das+Na%C3%A7%C3%B5es)!8m2!3d38.782206!4d-9.09504!3m4!1s0xd1931f39b1f8049:0x1992f355ea7fc221!8m2!3d38.782206!4d-9.09504" target="_blank">Direções</a>';
+
+var infowindowConteudoPoliciaParqueNacoes = new google.maps.InfoWindow({
+content: "<div class='scroll-fix'>"+ConteudoPoliciaParqueNacoes + "</div>"
+					  });
+
+PoliciaParqueNacoes.addListener('click', function() {
+infowindowConteudoPoliciaParqueNacoes.open(map, PoliciaParqueNacoes);
+					  });
+
+
+
+var PoliciaMusgueira = new google.maps.Marker({
+position: {lat: 38.777875, lng: -9.153015},
+map: map
+					 });
+					
+var ConteudoPoliciaMusgueira = '41ª Esquadra da Polícia - Musgueira<br><br><a href="https://www.google.pt/maps/place/41%C2%AA+Esquadra+-+Musgueira,+1750-358+Lisboa/@38.7778798,-9.1541157,289m/data=!3m2!1e3!4b1!4m13!1m7!3m6!1s0xd19328c44d85c95:0x535b58ef44cb9e4c!2s41%C2%AA+Esquadra+-+Musgueira,+1750-358+Lisboa!3b1!8m2!3d38.7778727!4d-9.1530096!3m4!1s0xd19328c44d85c95:0x535b58ef44cb9e4c!8m2!3d38.7778727!4d-9.1530096" target="_blank">Direções</a>';
+
+var infowindowConteudoPoliciaMusgueira = new google.maps.InfoWindow({
+content: "<div class='scroll-fix'>"+ConteudoPoliciaMusgueira + "</div>"
+					  });
+
+PoliciaMusgueira.addListener('click', function() {
+infowindowConteudoPoliciaMusgueira.open(map, PoliciaMusgueira);
+					  });
+
+
+var PoliciaCarnide = new google.maps.Marker({
+position: {lat: 38.759204, lng: -9.192107},
+map: map
+					 });
+					
+var ConteudoPoliciaCarnide = '42ª Esquadra da Polícia - Carnide<br><br><a href="https://www.google.pt/maps/place/PSP+%E2%80%94+42.%C2%AA+Esquadra+(Carnide)/@38.7589768,-9.1922161,144m/data=!3m1!1e3!4m12!1m6!3m5!1s0xd1ecd2d0f81c867:0xf903e3f5fa5a203f!2sPSP+%E2%80%94+42.%C2%AA+Esquadra+(Carnide)!8m2!3d38.7591926!4d-9.1921062!3m4!1s0xd1ecd2d0f81c867:0xf903e3f5fa5a203f!8m2!3d38.7591926!4d-9.1921062" target="_blank">Direções</a>';
+
+var infowindowConteudoPoliciaCarnide = new google.maps.InfoWindow({
+content: "<div class='scroll-fix'>"+ConteudoPoliciaCarnide + "</div>"
+					  });
+
+PoliciaCarnide.addListener('click', function() {
+infowindowConteudoPoliciaCarnide.open(map, PoliciaCarnide);
+					  });
+
+
+
+var PoliciaBoavista = new google.maps.Marker({
+position: {lat: 38.733244, lng: -9.206185},
+map: map
+					 });
+					
+var ConteudoPoliciaBoavista = '43ª Esquadra da Polícia - Bairro da Boavista<br><br><a href="https://www.google.pt/maps/place/PSP+-+43%C2%AA+Esquadra+(Boavista)/@38.7332177,-9.2069211,202m/data=!3m2!1e3!4b1!4m12!1m6!3m5!1s0xd1eccc6b3d623eb:0xa21f2e7ec82c412!2sPSP+-+43%C2%AA+Esquadra+(Boavista)!8m2!3d38.7332163!4d-9.2061757!3m4!1s0xd1eccc6b3d623eb:0xa21f2e7ec82c412!8m2!3d38.7332163!4d-9.2061757" target="_blank">Direções</a>';
+
+var infowindowConteudoPoliciaBoavista = new google.maps.InfoWindow({
+content: "<div class='scroll-fix'>"+ConteudoPoliciaBoavista + "</div>"
+					  });
+
+PoliciaBoavista.addListener('click', function() {
+infowindowConteudoPoliciaBoavista.open(map, PoliciaBoavista);
+					  });
+
+
+
+var PoliciaAltadeLisboa = new google.maps.Marker({
+position: {lat: 38.767052, lng: -9.149887},
+map: map
+					 });
+					
+var ConteudoPoliciaAltadeLisboa = '44ª Esquadra da Polícia - Alta de Lisboa<br><br><a href="https://www.google.pt/maps/place/PSP+-+Divis%C3%A3o+de+Tr%C3%A2nsito/@38.7669948,-9.1501289,68m/data=!3m1!1e3!4m12!1m6!3m5!1s0xd1932f6e049fe3d:0x30720d4c6e1eac93!2sPSP+-+Divis%C3%A3o+de+Tr%C3%A2nsito!8m2!3d38.7670503!4d-9.149886!3m4!1s0xd1932f6e049fe3d:0x30720d4c6e1eac93!8m2!3d38.7670503!4d-9.149886" target="_blank">Direções</a>';
+
+var infowindowConteudoPoliciaAltadeLisboa = new google.maps.InfoWindow({
+content: "<div class='scroll-fix'>"+ConteudoPoliciaAltadeLisboa + "</div>"
+					  });
+					  
+					  
+var PovosAmigos = new google.maps.Marker({
+position: {lat: 38.702714, lng: -9.171710},
+map: map
+					});
+
+var ConteudoPovosAmigos = 'Associação Guineense e Povos Amigos <br><br><a href="https://www.google.com/maps/place/R.+da+Cintura+do+Porto+de+Lisboa,+Lisboa/@38.7027299,-9.1804648,2372m/data=!3m1!1e3!4m8!1m2!2m1!1sAvenida+Cintura+do+Porto+de+Lisboa,+Pavilh%C3%A3o+I+1200+-+109+Lisboa!3m4!1s0xd1934a30f9e21e3:0xa0ca6ad526c0c8f1!8m2!3d38.7025002!4d-9.171634" target="_blank">Direções</a>';
+
+var infowindowConteudoPovosAmigos = new google.maps.InfoWindow({
+content: "<div class='scroll-fix'>"+ConteudoPovosAmigos+ "</div>"
+					  });
+
+ PovosAmigos.addListener('click', function() {
+infowindowConteudoPovosAmigos.open(map,  PovosAmigos);
+					  });
+					
+					var AssociacaoTimorenses = new google.maps.Marker({
+position: {lat: 38.736281, lng: -9.124073},
+map: map
+					  });
+					
+var ConteudoAssociacaoTimorenses = 'Associação para timorenses <br><br><a href="https://www.google.com/maps/place/R.+Jo%C3%A3o+do+Nascimento+Costa+8,+1900-269+Lisboa/@38.735883,-9.1246095,598m/data=!3m1!1e3!4m8!1m2!2m1!1sJo%C3%A3o+Nascimento+Costa,+8,+r%2Fc+Esq.,+1900+-+269+Lisboa!3m4!1s0xd1933bff0693113:0x5516c4287ba8cefe!8m2!3d38.7360391!4d-9.1240557" target="_blank">Direções</a>';
+
+var infowindowConteudoAssociacaoTimorenses = new google.maps.InfoWindow({
+content: "<div class='scroll-fix'>"+ConteudoAssociacaoTimorenses+ "</div>"
+					  });
+
+ AssociacaoTimorenses.addListener('click', function() {
+infowindowConteudoAssociacaoTimorenses.open(map, AssociacaoTimorenses);
+					  });
+
+					var CooperacaoDesenvolvimento = new google.maps.Marker({
+position: {lat: 38.717033, lng: -9.170338},
+map: map
+					  });
+					
+var ConteudoCooperacaoDesenvolvimento = 'Associação para Cooperação e Desenvolvimento <br><br><a href="https://www.google.com/maps/place/R.+Freitas+Gazul,+Lisboa/@38.7168453,-9.1724833,593m/data=!3m1!1e3!4m13!1m7!3m6!1s0xd19335c2c4e3e9d:0xb5002b6bdc7cd511!2sR.+Freitas+Gazul,+Lisboa!3b1!8m2!3d38.7168411!4d-9.1702946!3m4!1s0xd19335c2c4e3e9d:0xb5002b6bdc7cd511!8m2!3d38.7168411!4d-9.1702946" target="_blank">Direções</a>';
+
+var infowindowConteudoCooperacaoDesenvolvimento = new google.maps.InfoWindow({
+content: "<div class='scroll-fix'>"+ConteudoCooperacaoDesenvolvimento+ "</div>"
+					  });
+
+CooperacaoDesenvolvimento.addListener('click', function() {
+infowindowConteudoCooperacaoDesenvolvimento.open(map, CooperacaoDesenvolvimento);
+					  });
+
+					  var AmigosPrincipe = new google.maps.Marker({
+position: {lat: 38.789357, lng:  -9.153343},
+map: map
+					  });
+					
+var ConteudoAmigosPrincipe = 'Associação Amigos do Príncipe <br><br><a href="https://www.google.com/maps/place/R.+Ant%C3%B3nio+Vilar+16,+1750-167+Lisboa/@38.787613,-9.1548036,2819m/data=!3m1!1e3!4m13!1m7!3m6!1s0xd19328466f4575b:0x5d8c4c8647d0a6b6!2sR.+Ant%C3%B3nio+Vilar+16,+1750-167+Lisboa!3b1!8m2!3d38.78906!4d-9.1534122!3m4!1s0xd19328466f4575b:0x5d8c4c8647d0a6b6!8m2!3d38.78906!4d-9.1534122" target="_blank">Direções</a>';
+
+var infowindowConteudoAmigosPrincipe = new google.maps.InfoWindow({
+content: "<div class='scroll-fix'>"+ConteudoAmigosPrincipe+ "</div>"
+					  });
+
+AmigosPrincipe.addListener('click', function() {
+infowindowConteudoAmigosPrincipe.open(map, AmigosPrincipe);
+					  });
+					
+					var ResidentesPortugal = new google.maps.Marker({
+position: {lat: 38.790012, lng: -9.151649},
+map: map
+					  });
+					
+var ConteudoResidentesPortugal = 'Associação de Nepaleses Residentes em Portugal <br><br><a href="https://www.google.com/maps/place/R.+Ant%C3%B3nio+Vilar+16,+1750-167+Lisboa/@38.787613,-9.1548036,2819m/data=!3m1!1e3!4m13!1m7!3m6!1s0xd19328466f4575b:0x5d8c4c8647d0a6b6!2sR.+Ant%C3%B3nio+Vilar+16,+1750-167+Lisboa!3b1!8m2!3d38.78906!4d-9.1534122!3m4!1s0xd19328466f4575b:0x5d8c4c8647d0a6b6!8m2!3d38.78906!4d-9.1534122" target="_blank">Direções</a>';
+
+var infowindowConteudoResidentesPortugal = new google.maps.InfoWindow({
+content: "<div class='scroll-fix'>"+ConteudoResidentesPortugal+ "</div>"
+					  });
+
+ResidentesPortugal.addListener('click', function() {
+infowindowConteudoResidentesPortugal.open(map, ResidentesPortugal);
+					  });
+
+					
+					}
+				</script>
+				<script async defer
+				src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqEpASiJ5A6cuW3irLga2TwqzDW_JutVk&callback=initMap">
+				</script>
+				</div>
+				
+				</div>
+				
+				<div>
+				<footer class="footer1">
+				</footer>
+				</div>
+				
+				
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script>
+			
+		</script>
+	</body>
+</html>
